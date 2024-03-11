@@ -1,0 +1,2611 @@
+Program.Sub.ScreenSU.Start
+Gui.FormRequirementMaintenance..Create
+Gui.FormRequirementMaintenance..Caption("Work Order Special Requirement Maintenance")
+Gui.FormRequirementMaintenance..Size(13785,11235)
+Gui.FormRequirementMaintenance..MinX(0)
+Gui.FormRequirementMaintenance..MinY(0)
+Gui.FormRequirementMaintenance..Position(0,0)
+Gui.FormRequirementMaintenance..BackColor(-2147483633)
+Gui.FormRequirementMaintenance..MousePointer(0)
+Gui.FormRequirementMaintenance..Event(UnLoad,FormRequirementMaintenance_UnLoad)
+Gui.FormRequirementMaintenance..MaxButton(False)
+Gui.FormRequirementMaintenance..Sizeable(False)
+Gui.FormRequirementMaintenance.lblID.Create(Label,"Special Requirement ID :",True,1875,255,0,45,180,True,0,"Arial",8,-2147483633,0)
+Gui.FormRequirementMaintenance.txtRequirementID.Create(TextBox,"",True,1275,300,0,1950,90,True,1,"Arial",8,-2147483643,1)
+Gui.FormRequirementMaintenance.txtRequirementID.NumericOnly(2)
+Gui.FormRequirementMaintenance.txtRequirementID.Event(LostFocus,txtRequirementID_LostFocus)
+Gui.FormRequirementMaintenance.txtRequirementID.TabStop(True)
+Gui.FormRequirementMaintenance.txtRequirementID.TabIndex(1)
+Gui.FormRequirementMaintenance.cmdNewRequirement.Create(Button)
+Gui.FormRequirementMaintenance.cmdNewRequirement.Size(855,375)
+Gui.FormRequirementMaintenance.cmdNewRequirement.Position(10140,60)
+Gui.FormRequirementMaintenance.cmdNewRequirement.Caption("New")
+Gui.FormRequirementMaintenance.cmdNewRequirement.Event(Click,cmdNewRequirement_Click)
+Gui.FormRequirementMaintenance.cmdNewRequirement.TabStop(True)
+Gui.FormRequirementMaintenance.cmdNewRequirement.TabIndex(4)
+Gui.FormRequirementMaintenance.cmdRequirementBrowser.Create(Button)
+Gui.FormRequirementMaintenance.cmdRequirementBrowser.Size(375,375)
+Gui.FormRequirementMaintenance.cmdRequirementBrowser.Position(3255,60)
+Gui.FormRequirementMaintenance.cmdRequirementBrowser.Caption("^")
+Gui.FormRequirementMaintenance.cmdRequirementBrowser.Event(Click,cmdRequirementBrowser_Click)
+Gui.FormRequirementMaintenance.cmdRequirementBrowser.TabStop(True)
+Gui.FormRequirementMaintenance.cmdRequirementBrowser.TabIndex(2)
+Gui.FormRequirementMaintenance.cmdSaveRequirement.Create(Button)
+Gui.FormRequirementMaintenance.cmdSaveRequirement.Size(855,375)
+Gui.FormRequirementMaintenance.cmdSaveRequirement.Position(11010,60)
+Gui.FormRequirementMaintenance.cmdSaveRequirement.Anchor(9)
+Gui.FormRequirementMaintenance.cmdSaveRequirement.Caption("Save")
+Gui.FormRequirementMaintenance.cmdSaveRequirement.Event(Click,cmdSaveRequirement_Click)
+Gui.FormRequirementMaintenance.cmdSaveRequirement.Enabled(False)
+Gui.FormRequirementMaintenance.cmdSaveRequirement.TabStop(True)
+Gui.FormRequirementMaintenance.cmdSaveRequirement.TabIndex(5)
+Gui.FormRequirementMaintenance.gsgcCustomers.Create(GsGridControl)
+Gui.FormRequirementMaintenance.gsgcCustomers.Size(6720,3495)
+Gui.FormRequirementMaintenance.gsgcCustomers.Position(75,990)
+Gui.FormRequirementMaintenance.gsgcCustomers.Event(RowCellClick,gsgcCustomers_RowCellClick)
+Gui.FormRequirementMaintenance.gsgcCustomers.Enabled(False)
+Gui.FormRequirementMaintenance.gsgcSortCodes.Create(GsGridControl)
+Gui.FormRequirementMaintenance.gsgcSortCodes.Size(6720,3495)
+Gui.FormRequirementMaintenance.gsgcSortCodes.Position(6870,990)
+Gui.FormRequirementMaintenance.gsgcSortCodes.Event(RowCellClick,gsgcSortCodes_RowCellClick)
+Gui.FormRequirementMaintenance.gsgcSortCodes.Enabled(False)
+Gui.FormRequirementMaintenance.lblCustomers.Create(Label,"Customers:",True,945,255,0,75,465,True,0,"Arial",8,-2147483633,0)
+Gui.FormRequirementMaintenance.lblSortCodes.Create(Label,"Sort Codes:",True,960,255,0,6870,465,True,0,"Arial",8,-2147483633,0)
+Gui.FormRequirementMaintenance.txtCustomer.Create(TextBox,"",True,1590,300,0,75,660,False,0,"Arial",8,13882323,1)
+Gui.FormRequirementMaintenance.txtCustomer.MaxLength(6)
+Gui.FormRequirementMaintenance.txtCustomer.Event(LostFocus,txtCustomer_LostFocus)
+Gui.FormRequirementMaintenance.txtCustomer.TabStop(True)
+Gui.FormRequirementMaintenance.txtCustomer.TabIndex(8)
+Gui.FormRequirementMaintenance.txtCustomerName.Create(TextBox,"",True,3825,300,0,1710,660,False,0,"Arial",8,13882323,1)
+Gui.FormRequirementMaintenance.txtCustomerName.TabStop(True)
+Gui.FormRequirementMaintenance.txtCustomerName.TabIndex(9)
+Gui.FormRequirementMaintenance.txtCustomerName.Locked(True)
+Gui.FormRequirementMaintenance.cmdCustomerBrowser.Create(Button)
+Gui.FormRequirementMaintenance.cmdCustomerBrowser.Size(375,375)
+Gui.FormRequirementMaintenance.cmdCustomerBrowser.Position(5565,615)
+Gui.FormRequirementMaintenance.cmdCustomerBrowser.Caption("^")
+Gui.FormRequirementMaintenance.cmdCustomerBrowser.Event(Click,cmdCustomerBrowser_Click)
+Gui.FormRequirementMaintenance.cmdCustomerBrowser.Enabled(False)
+Gui.FormRequirementMaintenance.cmdCustomerBrowser.TabStop(True)
+Gui.FormRequirementMaintenance.cmdCustomerBrowser.TabIndex(10)
+Gui.FormRequirementMaintenance.cmdAddCustomer.Create(Button)
+Gui.FormRequirementMaintenance.cmdAddCustomer.Size(855,375)
+Gui.FormRequirementMaintenance.cmdAddCustomer.Position(5955,615)
+Gui.FormRequirementMaintenance.cmdAddCustomer.Caption("Add")
+Gui.FormRequirementMaintenance.cmdAddCustomer.Event(Click,cmdAddCustomer_Click)
+Gui.FormRequirementMaintenance.cmdAddCustomer.Enabled(False)
+Gui.FormRequirementMaintenance.cmdAddCustomer.TabStop(True)
+Gui.FormRequirementMaintenance.cmdAddCustomer.TabIndex(11)
+Gui.FormRequirementMaintenance.txtSortCode.Create(TextBox,"",True,1590,300,0,6870,660,False,0,"Arial",8,13882323,1)
+Gui.FormRequirementMaintenance.txtSortCode.MaxLength(10)
+Gui.FormRequirementMaintenance.txtSortCode.Event(LostFocus,txtSortCode_LostFocus)
+Gui.FormRequirementMaintenance.txtSortCode.TabStop(True)
+Gui.FormRequirementMaintenance.txtSortCode.TabIndex(12)
+Gui.FormRequirementMaintenance.txtSortCodeDescription.Create(TextBox,"",True,3825,300,0,8505,660,False,0,"Arial",8,13882323,1)
+Gui.FormRequirementMaintenance.txtSortCodeDescription.TabStop(True)
+Gui.FormRequirementMaintenance.txtSortCodeDescription.TabIndex(13)
+Gui.FormRequirementMaintenance.txtSortCodeDescription.Locked(True)
+Gui.FormRequirementMaintenance.cmdSortCodeBrowser.Create(Button)
+Gui.FormRequirementMaintenance.cmdSortCodeBrowser.Size(375,375)
+Gui.FormRequirementMaintenance.cmdSortCodeBrowser.Position(12360,615)
+Gui.FormRequirementMaintenance.cmdSortCodeBrowser.Caption("^")
+Gui.FormRequirementMaintenance.cmdSortCodeBrowser.Event(Click,cmdSortCodeBrowser_Click)
+Gui.FormRequirementMaintenance.cmdSortCodeBrowser.Enabled(False)
+Gui.FormRequirementMaintenance.cmdSortCodeBrowser.TabStop(True)
+Gui.FormRequirementMaintenance.cmdSortCodeBrowser.TabIndex(14)
+Gui.FormRequirementMaintenance.cmdAddSortCode.Create(Button)
+Gui.FormRequirementMaintenance.cmdAddSortCode.Size(855,375)
+Gui.FormRequirementMaintenance.cmdAddSortCode.Position(12750,615)
+Gui.FormRequirementMaintenance.cmdAddSortCode.Caption("Add")
+Gui.FormRequirementMaintenance.cmdAddSortCode.Event(Click,cmdAddSortCode_Click)
+Gui.FormRequirementMaintenance.cmdAddSortCode.Enabled(False)
+Gui.FormRequirementMaintenance.cmdAddSortCode.TabStop(True)
+Gui.FormRequirementMaintenance.cmdAddSortCode.TabIndex(15)
+Gui.FormRequirementMaintenance.lblTrigger.Create(Label,"This special requirement will be triggered on any combination of the customers and sort codes listed above.",True,8130,255,0,75,4575,True,0,"Arial",8,-2147483633,0)
+Gui.FormRequirementMaintenance.lblTrigger.FontStyle(False,True,False,False,False)
+Gui.FormRequirementMaintenance.lblDescription.Create(Label,"Description :",True,1035,255,0,3690,180,True,0,"Arial",8,-2147483633,0)
+Gui.FormRequirementMaintenance.txtRequirementDescription.Create(TextBox,"",True,5400,300,0,4695,90,False,0,"Arial",8,13882323,1)
+Gui.FormRequirementMaintenance.txtRequirementDescription.TabStop(True)
+Gui.FormRequirementMaintenance.txtRequirementDescription.TabIndex(3)
+Gui.FormRequirementMaintenance.txtRequirementDescription.Event(LostFocus,txtRequirementDescription_LostFocus)
+Gui.FormRequirementMaintenance.frameOperations.Create(Frame)
+Gui.FormRequirementMaintenance.frameOperations.Size(13515,6090)
+Gui.FormRequirementMaintenance.frameOperations.Position(75,4770)
+Gui.FormRequirementMaintenance.frameOperations.Caption("Operations")
+Gui.FormRequirementMaintenance.frameOperations.Enabled(False)
+Gui.FormRequirementMaintenance.frameOperations.Anchor(14)
+Gui.FormRequirementMaintenance.lblOperationID.Create(Label,"ID :",True,330,255,0,75,330,True,0,"Arial",8,-2147483633,0)
+Gui.FormRequirementMaintenance.lblOperationID.Parent("frameOperations")
+Gui.FormRequirementMaintenance.txtOperationID.Create(TextBox,"",True,525,300,0,720,240,True,1,"Arial",8,-2147483633,1)
+Gui.FormRequirementMaintenance.txtOperationID.Parent("frameOperations")
+Gui.FormRequirementMaintenance.txtOperationID.NumericOnly(2)
+Gui.FormRequirementMaintenance.txtOperationID.Event(LostFocus,txtOperationID_LostFocus)
+Gui.FormRequirementMaintenance.txtOperationID.TabStop(True)
+Gui.FormRequirementMaintenance.txtOperationID.TabIndex(16)
+Gui.FormRequirementMaintenance.lblType.Create(Label,"Type :",True,555,255,0,75,1170,True,0,"Arial",8,-2147483633,0)
+Gui.FormRequirementMaintenance.lblType.Parent("frameOperations")
+Gui.FormRequirementMaintenance.ddlType.Create(DropDownList)
+Gui.FormRequirementMaintenance.ddlType.Size(4005,330)
+Gui.FormRequirementMaintenance.ddlType.Position(720,1035)
+Gui.FormRequirementMaintenance.ddlType.Parent("frameOperations")
+Gui.FormRequirementMaintenance.ddlType.Event(Click,ddlType_Click)
+Gui.FormRequirementMaintenance.ddlType.Sorted(True)
+Gui.FormRequirementMaintenance.ddlType.Enabled(False)
+Gui.FormRequirementMaintenance.ddlType.ToolTip("The primary type of sequence this operation will focus on")
+Gui.FormRequirementMaintenance.ddlType.TabStop(True)
+Gui.FormRequirementMaintenance.ddlType.TabIndex(22)
+Gui.FormRequirementMaintenance.ddlMode.Create(DropDownList)
+Gui.FormRequirementMaintenance.ddlMode.Size(4005,330)
+Gui.FormRequirementMaintenance.ddlMode.Position(720,1470)
+Gui.FormRequirementMaintenance.ddlMode.Parent("frameOperations")
+Gui.FormRequirementMaintenance.ddlMode.Event(Click,ddlMode_Click)
+Gui.FormRequirementMaintenance.ddlMode.Sorted(True)
+Gui.FormRequirementMaintenance.ddlMode.Enabled(False)
+Gui.FormRequirementMaintenance.ddlMode.ToolTip("How the sequence will be handled")
+Gui.FormRequirementMaintenance.ddlMode.TabStop(True)
+Gui.FormRequirementMaintenance.ddlMode.TabIndex(23)
+Gui.FormRequirementMaintenance.lblMode.Create(Label,"Mode :",True,600,255,0,75,1605,True,0,"Arial",8,-2147483633,0)
+Gui.FormRequirementMaintenance.lblMode.Parent("frameOperations")
+Gui.FormRequirementMaintenance.cmdNewOperation.Create(Button)
+Gui.FormRequirementMaintenance.cmdNewOperation.Size(855,375)
+Gui.FormRequirementMaintenance.cmdNewOperation.Position(1275,210)
+Gui.FormRequirementMaintenance.cmdNewOperation.Parent("frameOperations")
+Gui.FormRequirementMaintenance.cmdNewOperation.Caption("New")
+Gui.FormRequirementMaintenance.cmdNewOperation.Event(Click,cmdNewOperation_Click)
+Gui.FormRequirementMaintenance.cmdNewOperation.TabStop(True)
+Gui.FormRequirementMaintenance.cmdNewOperation.TabIndex(17)
+Gui.FormRequirementMaintenance.cmdSaveOperation.Create(Button)
+Gui.FormRequirementMaintenance.cmdSaveOperation.Size(855,375)
+Gui.FormRequirementMaintenance.cmdSaveOperation.Position(2145,210)
+Gui.FormRequirementMaintenance.cmdSaveOperation.Parent("frameOperations")
+Gui.FormRequirementMaintenance.cmdSaveOperation.Caption("Save")
+Gui.FormRequirementMaintenance.cmdSaveOperation.Event(Click,cmdSaveOperation_Click)
+Gui.FormRequirementMaintenance.cmdSaveOperation.TabStop(True)
+Gui.FormRequirementMaintenance.cmdSaveOperation.TabIndex(18)
+Gui.FormRequirementMaintenance.cmdClearOperation.Create(Button)
+Gui.FormRequirementMaintenance.cmdClearOperation.Size(855,375)
+Gui.FormRequirementMaintenance.cmdClearOperation.Position(3015,210)
+Gui.FormRequirementMaintenance.cmdClearOperation.Parent("frameOperations")
+Gui.FormRequirementMaintenance.cmdClearOperation.Caption("Clear")
+Gui.FormRequirementMaintenance.cmdClearOperation.Event(Click,cmdClearOperation_Click)
+Gui.FormRequirementMaintenance.cmdClearOperation.TabStop(True)
+Gui.FormRequirementMaintenance.cmdClearOperation.TabIndex(19)
+Gui.FormRequirementMaintenance.lblOperationDescription.Create(Label,"Desc. :",True,615,255,0,75,735,True,0,"Arial",8,-2147483633,0)
+Gui.FormRequirementMaintenance.lblOperationDescription.Parent("frameOperations")
+Gui.FormRequirementMaintenance.txtOperationDescription.Create(TextBox,"",True,4005,300,0,720,645,False,0,"Arial",8,13882323,1)
+Gui.FormRequirementMaintenance.txtOperationDescription.Parent("frameOperations")
+Gui.FormRequirementMaintenance.txtOperationDescription.TabStop(True)
+Gui.FormRequirementMaintenance.txtOperationDescription.TabIndex(21)
+Gui.FormRequirementMaintenance.txtOperationDescription.Event(LostFocus,txtOperationDescription_LostFocus)
+Gui.FormRequirementMaintenance.lblValue.Create(Label,"Value :",True,1920,255,0,75,2445,True,0,"Arial",8,-2147483633,0)
+Gui.FormRequirementMaintenance.lblValue.Parent("frameOperations")
+Gui.FormRequirementMaintenance.txtValue.Create(TextBox,"",True,2355,300,0,1995,2370,False,0,"Arial",8,13882323,1)
+Gui.FormRequirementMaintenance.txtValue.Parent("frameOperations")
+Gui.FormRequirementMaintenance.txtValue.Event(LostFocus,txtValue_LostFocus)
+Gui.FormRequirementMaintenance.txtValue.TabStop(True)
+Gui.FormRequirementMaintenance.txtValue.TabIndex(25)
+Gui.FormRequirementMaintenance.txtValue.ToolTip("The workcenter or material to remove, replace, or insert after/before.")
+Gui.FormRequirementMaintenance.cmdValueBrowser.Create(Button)
+Gui.FormRequirementMaintenance.cmdValueBrowser.Size(375,375)
+Gui.FormRequirementMaintenance.cmdValueBrowser.Position(4365,2340)
+Gui.FormRequirementMaintenance.cmdValueBrowser.Parent("frameOperations")
+Gui.FormRequirementMaintenance.cmdValueBrowser.Caption("^")
+Gui.FormRequirementMaintenance.cmdValueBrowser.Event(Click,cmdValueBrowser_Click)
+Gui.FormRequirementMaintenance.cmdValueBrowser.Enabled(False)
+Gui.FormRequirementMaintenance.cmdValueBrowser.TabStop(True)
+Gui.FormRequirementMaintenance.cmdValueBrowser.TabIndex(26)
+Gui.FormRequirementMaintenance.lblGrid.Create(Label,"Insert Value :",True,2625,255,0,4815,420,True,0,"Arial",8,-2147483633,0)
+Gui.FormRequirementMaintenance.lblGrid.Parent("frameOperations")
+Gui.FormRequirementMaintenance.txtInsertValue.Create(TextBox,"",True,2625,300,0,4815,645,False,0,"Arial",8,13882323,1)
+Gui.FormRequirementMaintenance.txtInsertValue.Parent("frameOperations")
+Gui.FormRequirementMaintenance.txtInsertValue.Event(LostFocus,txtInsertValue_LostFocus)
+Gui.FormRequirementMaintenance.txtInsertValue.TabStop(True)
+Gui.FormRequirementMaintenance.txtInsertValue.TabIndex(27)
+Gui.FormRequirementMaintenance.txtInsertValue.ToolTip("The workcenters or parts to be inserted into the work order.")
+Gui.FormRequirementMaintenance.cmdInsertValueBrowser.Create(Button)
+Gui.FormRequirementMaintenance.cmdInsertValueBrowser.Size(375,375)
+Gui.FormRequirementMaintenance.cmdInsertValueBrowser.Position(8130,600)
+Gui.FormRequirementMaintenance.cmdInsertValueBrowser.Parent("frameOperations")
+Gui.FormRequirementMaintenance.cmdInsertValueBrowser.Caption("^")
+Gui.FormRequirementMaintenance.cmdInsertValueBrowser.Event(Click,cmdInsertValueBrowser_Click)
+Gui.FormRequirementMaintenance.cmdInsertValueBrowser.Enabled(False)
+Gui.FormRequirementMaintenance.cmdInsertValueBrowser.TabStop(True)
+Gui.FormRequirementMaintenance.cmdInsertValueBrowser.TabIndex(29)
+Gui.FormRequirementMaintenance.cmdAddInsertValue.Create(Button)
+Gui.FormRequirementMaintenance.cmdAddInsertValue.Size(855,375)
+Gui.FormRequirementMaintenance.cmdAddInsertValue.Position(8520,600)
+Gui.FormRequirementMaintenance.cmdAddInsertValue.Parent("frameOperations")
+Gui.FormRequirementMaintenance.cmdAddInsertValue.Caption("Add")
+Gui.FormRequirementMaintenance.cmdAddInsertValue.Event(Click,cmdAddInsertValue_Click)
+Gui.FormRequirementMaintenance.cmdAddInsertValue.Enabled(False)
+Gui.FormRequirementMaintenance.cmdAddInsertValue.TabStop(True)
+Gui.FormRequirementMaintenance.cmdAddInsertValue.TabIndex(30)
+Gui.FormRequirementMaintenance.gsgcInsertValues.Create(GsGridControl)
+Gui.FormRequirementMaintenance.gsgcInsertValues.Size(4545,1665)
+Gui.FormRequirementMaintenance.gsgcInsertValues.Position(4815,1035)
+Gui.FormRequirementMaintenance.gsgcInsertValues.Parent("frameOperations")
+Gui.FormRequirementMaintenance.gsgcInsertValues.Event(RowCellClick,gsgcInsertValues_RowCellClick)
+Gui.FormRequirementMaintenance.gsgcInsertValues.Enabled(False)
+Gui.FormRequirementMaintenance.gsgcInsertValues.Event(CellValueChanged,gsgcInsertValues_CellValueChanged)
+Gui.FormRequirementMaintenance.lblValueType.Create(Label,"Insert Type :",True,2400,255,0,75,2025,True,0,"Arial",8,-2147483633,0)
+Gui.FormRequirementMaintenance.lblValueType.Parent("frameOperations")
+Gui.FormRequirementMaintenance.ddlInsertType.Create(DropDownList)
+Gui.FormRequirementMaintenance.ddlInsertType.Size(2235,330)
+Gui.FormRequirementMaintenance.ddlInsertType.Position(2490,1920)
+Gui.FormRequirementMaintenance.ddlInsertType.Parent("frameOperations")
+Gui.FormRequirementMaintenance.ddlInsertType.Event(Click,ddlInsertType_Click)
+Gui.FormRequirementMaintenance.ddlInsertType.Sorted(True)
+Gui.FormRequirementMaintenance.ddlInsertType.Enabled(False)
+Gui.FormRequirementMaintenance.ddlInsertType.ToolTip("The type of sequence to replace or insert before or after")
+Gui.FormRequirementMaintenance.ddlInsertType.TabStop(True)
+Gui.FormRequirementMaintenance.ddlInsertType.TabIndex(24)
+Gui.FormRequirementMaintenance.txtComments.Create(TextboxM)
+Gui.FormRequirementMaintenance.txtComments.Size(4005,1665)
+Gui.FormRequirementMaintenance.txtComments.Position(9420,1035)
+Gui.FormRequirementMaintenance.txtComments.Parent("frameOperations")
+Gui.FormRequirementMaintenance.txtComments.Enabled(False)
+Gui.FormRequirementMaintenance.txtComments.TabStop(True)
+Gui.FormRequirementMaintenance.txtComments.TabIndex(31)
+Gui.FormRequirementMaintenance.txtComments.Event(LostFocus,txtComments_LostFocus)
+Gui.FormRequirementMaintenance.txtComments.ToolTip("The comment lines to be added to the work order. Broken into 30 character lines.")
+Gui.FormRequirementMaintenance.txtComments.BackColor(13882323)
+Gui.FormRequirementMaintenance.lblComments.Create(Label,"Comments :",True,1020,255,0,9420,795,True,0,"Arial",8,-2147483633,0)
+Gui.FormRequirementMaintenance.lblComments.Parent("frameOperations")
+Gui.FormRequirementMaintenance.gsgcOperations.Create(GsGridControl)
+Gui.FormRequirementMaintenance.gsgcOperations.Size(13350,3210)
+Gui.FormRequirementMaintenance.gsgcOperations.Position(75,2790)
+Gui.FormRequirementMaintenance.gsgcOperations.Parent("frameOperations")
+Gui.FormRequirementMaintenance.gsgcOperations.Event(RowClick,gsgcOperations_RowClick)
+Gui.FormRequirementMaintenance.gsgcOperations.Anchor(14)
+Gui.FormRequirementMaintenance.cmdDeleteOperation.Create(Button)
+Gui.FormRequirementMaintenance.cmdDeleteOperation.Size(855,375)
+Gui.FormRequirementMaintenance.cmdDeleteOperation.Position(3870,210)
+Gui.FormRequirementMaintenance.cmdDeleteOperation.Parent("frameOperations")
+Gui.FormRequirementMaintenance.cmdDeleteOperation.Caption("Delete")
+Gui.FormRequirementMaintenance.cmdDeleteOperation.Event(Click,cmdDeleteOperation_Click)
+Gui.FormRequirementMaintenance.cmdDeleteOperation.TabStop(True)
+Gui.FormRequirementMaintenance.cmdDeleteOperation.TabIndex(20)
+Gui.FormRequirementMaintenance.lblQuantity.Create(Label,"Qty :",True,465,255,0,7485,420,True,0,"Arial",8,-2147483633,0)
+Gui.FormRequirementMaintenance.lblQuantity.Parent("frameOperations")
+Gui.FormRequirementMaintenance.txtQuantity.Create(TextBox,"",True,615,300,0,7485,645,False,0,"Arial",8,13882323,1)
+Gui.FormRequirementMaintenance.txtQuantity.Parent("frameOperations")
+Gui.FormRequirementMaintenance.txtQuantity.TabStop(True)
+Gui.FormRequirementMaintenance.txtQuantity.TabIndex(28)
+Gui.FormRequirementMaintenance.txtQuantity.NumericOnly(1)
+Gui.FormRequirementMaintenance.cmdClear.Create(Button)
+Gui.FormRequirementMaintenance.cmdClear.Size(855,375)
+Gui.FormRequirementMaintenance.cmdClear.Position(11880,60)
+Gui.FormRequirementMaintenance.cmdClear.Anchor(9)
+Gui.FormRequirementMaintenance.cmdClear.Caption("Clear")
+Gui.FormRequirementMaintenance.cmdClear.Event(Click,cmdClear_Click)
+Gui.FormRequirementMaintenance.cmdClear.Enabled(False)
+Gui.FormRequirementMaintenance.cmdClear.TabStop(True)
+Gui.FormRequirementMaintenance.cmdClear.TabIndex(6)
+Gui.FormRequirementMaintenance.cmdDelete.Create(Button)
+Gui.FormRequirementMaintenance.cmdDelete.Size(855,375)
+Gui.FormRequirementMaintenance.cmdDelete.Position(12750,60)
+Gui.FormRequirementMaintenance.cmdDelete.Anchor(9)
+Gui.FormRequirementMaintenance.cmdDelete.Caption("Delete")
+Gui.FormRequirementMaintenance.cmdDelete.Event(Click,cmdDelete_Click)
+Gui.FormRequirementMaintenance.cmdDelete.Enabled(False)
+Gui.FormRequirementMaintenance.cmdDelete.TabStop(True)
+Gui.FormRequirementMaintenance.cmdDelete.TabIndex(7)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+V.Global.sCustomer.Declare(String, "")
+V.Global.sSortCode.Declare(String, "")
+V.Global.iRequirementID.Declare(Long, -1)
+V.Global.iOperationID.Declare(Long, -1)
+V.Global.bUnsavedOperation.Declare(Boolean, False)
+V.Global.bLoadingOperation.Declare(Boolean, False)
+V.Global.bNewOperation.Declare(Boolean, False)
+V.Global.bCalledDelete.Declare(Boolean, False)
+V.Global.bCancel.Declare(Boolean, False)
+V.Global.iBackColorEnabled.Declare(Long, -2147483643)
+V.Global.iBackColorDisabled.Declare(Long, 13882323)
+V.Global.bUnsavedRequirement.Declare(Boolean, False)
+V.Global.bNewRequirement.Declare(Boolean, False)
+V.Global.bCalledFromDelete.Declare(Boolean, False)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'GCG_4401_SpecialRequirementMaintenance.g2u
+'Trey S
+'April 22, 2020
+'For Advanced Pressure Technology
+'Ticket: ADV720-72620160849-9
+'Quote: 8280 - 0
+'This program is a maintenance menu for special change rules that will be enacted on work orders at the time of creation.
+
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.CallSub(SetIcon)
+
+'load screen controls and grids
+F.Intrinsic.Control.CallSub(LoadTypeDropDown)
+F.Intrinsic.Control.CallSub(LoadModeDropDown)
+F.Intrinsic.Control.CallSub(LoadInsertModeDropDown)
+
+F.Intrinsic.Control.CallSub(LoadCustomersDataTable)
+F.Intrinsic.Control.CallSub(LoadCustomersGrid)
+
+F.Intrinsic.Control.CallSub(LoadSortCodesDataTable)
+F.Intrinsic.Control.CallSub(LoadSortCodesGrid)
+
+F.Intrinsic.Control.CallSub(LoadValuesDataTable)
+F.Intrinsic.Control.CallSub(LoadValuesGrid)
+
+F.Intrinsic.Control.CallSub(LoadOperationsDataTable)
+F.Intrinsic.Control.CallSub(LoadOperationsGrid)
+
+GUI.FormRequirementMaintenance..Show
+GUI.FormRequirementMaintenance..SetFocus
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.LoadTypeDropDown.Start
+'load type drop down items
+
+F.Intrinsic.Control.Try
+
+GUI.FormRequirementMaintenance.ddlType.AddItem("")
+GUI.FormRequirementMaintenance.ddlType.AddItem("Comment")
+GUI.FormRequirementMaintenance.ddlType.AddItem("Labor")
+GUI.FormRequirementMaintenance.ddlType.AddItem("Material")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadTypeDropDown.End
+
+Program.Sub.LoadModeDropDown.Start
+'load mode drop down items
+
+F.Intrinsic.Control.Try
+
+V.Local.bComment.Declare(Boolean, False)
+V.Local.bExists.Declare(Boolean, False)
+
+F.Intrinsic.Variable.ArgExists("COMMENT", V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists)
+	V.Local.bComment.Set(V.Args.Comment)
+F.Intrinsic.Control.EndIf
+
+GUI.FormRequirementMaintenance.ddlMode.ClearItems
+GUI.FormRequirementMaintenance.ddlMode.AddItem("")
+GUI.FormRequirementMaintenance.ddlMode.AddItem("Insert After")
+GUI.FormRequirementMaintenance.ddlMode.AddItem("Insert Before")
+GUI.FormRequirementMaintenance.ddlMode.AddItem("Insert at Top")
+GUI.FormRequirementMaintenance.ddlMode.AddItem("Insert at Bottom")
+
+F.Intrinsic.Control.If(V.Local.bComment.Not)
+	GUI.FormRequirementMaintenance.ddlMode.AddItem("Replace")
+	GUI.FormRequirementMaintenance.ddlMode.AddItem("Remove")
+F.Intrinsic.Control.Else
+	GUI.FormRequirementMaintenance.ddlMode.AddItem("Insert After Last Comment")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadModeDropDown.End
+
+Program.Sub.LoadInsertModeDropDown.Start
+'load insert mode drop down items
+
+F.Intrinsic.Control.Try
+
+GUI.FormRequirementMaintenance.ddlInsertType.AddItem("")
+GUI.FormRequirementMaintenance.ddlInsertType.AddItem("Labor")
+GUI.FormRequirementMaintenance.ddlInsertType.AddItem("Material")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadInsertModeDropDown.End
+
+Program.Sub.LoadCustomersDataTable.Start
+'load blank customer datatable
+
+F.Intrinsic.Control.Try
+
+F.Data.DataTable.Create("dtCustomers", True)
+F.Data.DataTable.AddColumn("dtCustomers", "CUSTOMER", "String", "")
+F.Data.DataTable.AddColumn("dtCustomers", "CUSTOMER_NAME", "String", "")
+F.Data.DataTable.AddColumn("dtCustomers", "DELETE", "String", "")
+F.Data.DataTable.AddColumn("dtCustomers", "ADDED_BY", "String", V.Caller.User)
+F.Data.DataTable.AddColumn("dtCustomers", "ADDED_AT", "Date")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadCustomersDataTable.End
+
+Program.Sub.LoadSortCodesDataTable.Start
+'load blank sort code datatable
+
+F.Intrinsic.Control.Try
+
+F.Data.DataTable.Create("dtSortCodes", True)
+F.Data.DataTable.AddColumn("dtSortCodes", "SORT_CODE", "String", "")
+F.Data.DataTable.AddColumn("dtSortCodes", "DESCRIPTION", "String", "")
+F.Data.DataTable.AddColumn("dtSortCodes", "DELETE", "String", "")
+F.Data.DataTable.AddColumn("dtSortCodes", "ADDED_BY", "String", V.Caller.User)
+F.Data.DataTable.AddColumn("dtSortCodes", "ADDED_AT", "Date")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadSortCodesDataTable.End
+
+Program.Sub.LoadValuesDataTable.Start
+'load blank values datatable
+
+F.Intrinsic.Control.Try
+
+F.Data.DataTable.Create("dtInsertValues", True)
+F.Data.DataTable.AddColumn("dtInsertValues", "VALUE", "String", "")
+F.Data.DataTable.AddColumn("dtInsertValues", "QUANTITY", "Float", 0)
+F.Data.DataTable.AddColumn("dtInsertValues", "DELETE", "String", "")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadValuesDataTable.End
+
+Program.Sub.LoadOperationsDataTable.Start
+'load blank operations datatable
+
+F.Intrinsic.Control.Try
+
+F.Data.DataTable.Create("dtOperations", True)
+F.Data.DataTable.AddColumn("dtOperations", "OPERATION_ID", "Long", 0)
+F.Data.DataTable.AddColumn("dtOperations", "DESCRIPTION", "String", "")
+F.Data.DataTable.AddColumn("dtOperations", "TYPE", "String", "")
+F.Data.DataTable.AddColumn("dtOperations", "MODE", "String", "")
+F.Data.DataTable.AddColumn("dtOperations", "INSERT_TYPE", "String", "")
+F.Data.DataTable.AddColumn("dtOperations", "VALUE", "String", "")
+F.Data.DataTable.AddColumn("dtOperations", "INSERT_VALUES", "String", "")
+F.Data.DataTable.AddColumn("dtOperations", "COMMENTS", "String", "")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadOperationsDataTable.End
+
+Program.Sub.LoadCustomersGrid.Start
+'load customer grid formatting
+
+F.Intrinsic.Control.Try
+
+GUI.FormRequirementMaintenance.gsgcCustomers.AddGridviewFromDataTable("gvCustomers", "dtCustomers")
+
+GUI.FormRequirementMaintenance.gsgcCustomers.SetGridviewProperty("gvCustomers", "Editable", False)
+GUI.FormRequirementMaintenance.gsgcCustomers.SetGridviewProperty("gvCustomers", "ReadOnly", True)
+GUI.FormRequirementMaintenance.gsgcCustomers.SetGridviewProperty("gvCustomers", "AllowColumnMoving", False)
+GUI.FormRequirementMaintenance.gsgcCustomers.SetGridviewProperty("gvCustomers", "EnableAppearanceOddRow", True)
+
+GUI.FormRequirementMaintenance.gsgcCustomers.SetColumnProperty("gvCustomers", "CUSTOMER", "HeaderFontBold", True)
+GUI.FormRequirementMaintenance.gsgcCustomers.SetColumnProperty("gvCustomers", "CUSTOMER_NAME", "HeaderFontBold", True)
+GUI.FormRequirementMaintenance.gsgcCustomers.SetColumnProperty("gvCustomers", "DELETE", "HeaderFontBold", True)
+
+GUI.FormRequirementMaintenance.gsgcCustomers.SetColumnProperty("gvCustomers", "DELETE", "ShowCaption", False)
+
+GUI.FormRequirementMaintenance.gsgcCustomers.SetColumnProperty("gvCustomers", "CUSTOMER", "Caption", "ID")
+GUI.FormRequirementMaintenance.gsgcCustomers.SetColumnProperty("gvCustomers", "CUSTOMER_NAME", "Caption", "Name")
+
+GUI.FormRequirementMaintenance.gsgcCustomers.SetColumnProperty("gvCustomers", "CUSTOMER", "MinWidth", 60)
+GUI.FormRequirementMaintenance.gsgcCustomers.SetColumnProperty("gvCustomers", "CUSTOMER_NAME", "MinWidth", 220)
+
+GUI.FormRequirementMaintenance.gsgcCustomers.SetColumnProperty("gvCustomers", "DELETE", "MaxWidth", 60)
+
+GUI.FormRequirementMaintenance.gsgcCustomers.SetColumnProperty("gvCustomers", "ADDED_BY", "Visible", False)
+GUI.FormRequirementMaintenance.gsgcCustomers.SetColumnProperty("gvCustomers", "ADDED_AT", "Visible", False)
+
+GUI.FormRequirementMaintenance.gsgcCustomers.SetColumnProperty("gvCustomers", "CUSTOMER", "SortOrder", "Ascending")
+
+GUI.FormRequirementMaintenance.gsgcCustomers.ColumnEdit("gvCustomers", "DELETE", "EditorButton", "Delete")
+
+GUI.FormRequirementMaintenance.gsgcCustomers.MainView("gvCustomers")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadCustomersGrid.End
+
+Program.Sub.LoadSortCodesGrid.Start
+'sort code grid formatting
+
+F.Intrinsic.Control.Try
+
+GUI.FormRequirementMaintenance.gsgcSortCodes.AddGridviewFromDataTable("gvSortCodes", "dtSortCodes")
+
+GUI.FormRequirementMaintenance.gsgcSortCodes.SetGridviewProperty("gvSortCodes", "Editable", False)
+GUI.FormRequirementMaintenance.gsgcSortCodes.SetGridviewProperty("gvSortCodes", "ReadOnly", True)
+GUI.FormRequirementMaintenance.gsgcSortCodes.SetGridviewProperty("gvSortCodes", "AllowColumnMoving", False)
+GUI.FormRequirementMaintenance.gsgcSortCodes.SetGridviewProperty("gvSortCodes", "EnableAppearanceOddRow", True)
+
+GUI.FormRequirementMaintenance.gsgcSortCodes.SetColumnProperty("gvSortCodes", "SORT_CODE", "HeaderFontBold", True)
+GUI.FormRequirementMaintenance.gsgcSortCodes.SetColumnProperty("gvSortCodes", "DESCRIPTION", "HeaderFontBold", True)
+GUI.FormRequirementMaintenance.gsgcSortCodes.SetColumnProperty("gvSortCodes", "DELETE", "HeaderFontBold", True)
+
+GUI.FormRequirementMaintenance.gsgcSortCodes.SetColumnProperty("gvSortCodes", "DELETE", "ShowCaption", False)
+
+GUI.FormRequirementMaintenance.gsgcSortCodes.SetColumnProperty("gvSortCodes", "SORT_CODE", "Caption", "Sort Code")
+GUI.FormRequirementMaintenance.gsgcSortCodes.SetColumnProperty("gvSortCodes", "DESCRIPTION", "Caption", "Description")
+
+GUI.FormRequirementMaintenance.gsgcSortCodes.SetColumnProperty("gvSortCodes", "SORT_CODE", "MinWidth", 60)
+GUI.FormRequirementMaintenance.gsgcSortCodes.SetColumnProperty("gvSortCodes", "DESCRIPTION", "MinWidth", 220)
+
+GUI.FormRequirementMaintenance.gsgcSortCodes.SetColumnProperty("gvSortCodes", "DELETE", "MaxWidth", 60)
+
+GUI.FormRequirementMaintenance.gsgcSortCodes.SetColumnProperty("gvSortCodes", "ADDED_BY", "Visible", False)
+GUI.FormRequirementMaintenance.gsgcSortCodes.SetColumnProperty("gvSortCodes", "ADDED_AT", "Visible", False)
+
+GUI.FormRequirementMaintenance.gsgcSortCodes.SetColumnProperty("gvSortCodes", "SORT_CODE", "SortOrder", "Ascending")
+
+GUI.FormRequirementMaintenance.gsgcSortCodes.ColumnEdit("gvSortCodes", "DELETE", "EditorButton", "Delete")
+
+GUI.FormRequirementMaintenance.gsgcSortCodes.MainView("gvSortCodes")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadSortCodesGrid.End
+
+Program.Sub.LoadValuesGrid.Start
+'values grid formatting
+
+F.Intrinsic.Control.Try
+
+GUI.FormRequirementMaintenance.gsgcInsertValues.AddGridviewFromDataTable("gvInsertValues", "dtInsertValues")
+
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetGridviewProperty("gvInsertValues", "AllowColumnMoving", False)
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetGridviewProperty("gvInsertValues", "EnableAppearanceOddRow", True)
+
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "VALUE", "HeaderFontBold", True)
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "DELETE", "HeaderFontBold", True)
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "QUANTITY", "HeaderFontBold", True)
+
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "DELETE", "ShowCaption", False)
+
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "VALUE", "Caption", "Part / WC")
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "QUANTITY", "Caption", "Quantity")
+
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "VALUE", "MinWidth", 170)
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "Quantity", "MinWidth", 50)
+
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "DELETE", "MaxWidth", 60)
+
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "VALUE", "ReadOnly", True)
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "DELETE", "ReadOnly", True)
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "Quantity", "ReadOnly", False)
+
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "VALUE", "AllowEdit", False)
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "DELETE", "AllowEdit", False)
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "Quantity", "AllowEdit", True)
+
+GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "Quantity", "DisplayCustomNumeric", "0.00")
+
+GUI.FormRequirementMaintenance.gsgcInsertValues.ColumnEdit("gvInsertValues", "DELETE", "EditorButton", "Delete")
+
+GUI.FormRequirementMaintenance.gsgcInsertValues.MainView("gvInsertValues")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadValuesGrid.End
+
+Program.Sub.LoadOperationsGrid.Start
+'operations grid formatting
+
+F.Intrinsic.Control.Try
+
+GUI.FormRequirementMaintenance.gsgcOperations.AddGridviewFromDataTable("gvOperations", "dtOperations")
+
+GUI.FormRequirementMaintenance.gsgcOperations.SetGridviewProperty("gvOperations", "Editable", False)
+GUI.FormRequirementMaintenance.gsgcOperations.SetGridviewProperty("gvOperations", "ReadOnly", True)
+GUI.FormRequirementMaintenance.gsgcOperations.SetGridviewProperty("gvOperations", "AllowColumnMoving", False)
+GUI.FormRequirementMaintenance.gsgcOperations.SetGridviewProperty("gvOperations", "EnableAppearanceOddRow", True)
+
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "OPERATION_ID", "HeaderFontBold", True)
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "DESCRIPTION", "HeaderFontBold", True)
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "TYPE", "HeaderFontBold", True)
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "MODE", "HeaderFontBold", True)
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "INSERT_TYPE", "HeaderFontBold", True)
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "VALUE", "HeaderFontBold", True)
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "INSERT_VALUES", "HeaderFontBold", True)
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "COMMENTS", "HeaderFontBold", True)
+
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "OPERATION_ID", "Caption", "ID")
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "DESCRIPTION", "Caption", "Description")
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "TYPE", "Caption", "Type")
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "MODE", "Caption", "Mode")
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "INSERT_TYPE", "Caption", "Insert Type")
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "VALUE", "Caption", "Part / WC")
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "INSERT_VALUES", "Caption", "Insert Parts / WCs")
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "COMMENTS", "Caption", "Comments")
+
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "OPERATION_ID", "MinWidth", 40)
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "DESCRIPTION", "MinWidth", 100)
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "TYPE", "MinWidth", 60)
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "MODE", "MinWidth", 120)
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "INSERT_TYPE", "MinWidth", 90)
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "VALUE", "MinWidth", 160)
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "INSERT_VALUES", "MinWidth", 200)
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "COMMENTS", "MinWidth", 200)
+
+GUI.FormRequirementMaintenance.gsgcOperations.SetColumnProperty("gvOperations", "OPERATION_ID", "SortOrder", "Ascending")
+
+GUI.FormRequirementMaintenance.gsgcOperations.MainView("gvOperations")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadOperationsGrid.End
+
+Program.Sub.LoadRequirement.Start
+'load the selected requirement onto the screen
+
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.CallSub(LoadCustomers)
+F.Intrinsic.Control.CallSub(LoadSortCodes)
+F.Intrinsic.Control.CallSub(LoadOperations)
+
+F.Intrinsic.Control.CallSub(ToggleHeaderControlsEnabled, "ENABLED", True)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadRequirement.End
+
+Program.Sub.LoadCustomers.Start
+'load the new customers for this requirement ID
+
+F.Intrinsic.Control.Try
+
+V.Local.sSQL.Declare(String)
+
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+
+F.Intrinsic.String.Build("select RTRIM(A.CUSTOMER) CUSTOMER, RTRIM(B.NAME_CUSTOMER) CUSTOMER_NAME from GCG_4401_CUSTOMERS A left join V_CUSTOMER_MASTER B on A.CUSTOMER = B.CUSTOMER where A.REQUIREMENT_ID = {0}", V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, V.Local.sSQL)
+
+F.Data.DataTable.CreateFromSQL("dtCustomersTemp", "Con", V.Local.sSQL)
+
+'clear old records, merge new ones in 
+F.Data.DataTable.DeleteRow("dtCustomers")
+F.Data.DataTable.Merge("dtCustomersTemp", "dtCustomers", False, 2)
+F.Data.DataTable.Close("dtCustomersTemp")
+
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadCustomers.End
+
+Program.Sub.LoadSortCodes.Start
+'load the new sort codes for this requirement ID
+
+F.Intrinsic.Control.Try
+
+V.Local.sSQL.Declare(String)
+
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+
+F.Intrinsic.String.Build("select RTRIM(A.SORT_CODE) SORT_CODE, RTRIM(B.DESCR) DESCRIPTION from GCG_4401_SORT_CODES A left join V_INV_SORT B on A.SORT_CODE = B.SORT_CODE where A.REQUIREMENT_ID = {0}", V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, V.Local.sSQL)
+
+F.Data.DataTable.CreateFromSQL("dtSortCodesTemp", "Con", V.Local.sSQL)
+
+'clear old records, merge new ones in 
+F.Data.DataTable.DeleteRow("dtSortCodes")
+F.Data.DataTable.Merge("dtSortCodesTemp", "dtSortCodes", False, 2)
+F.Data.DataTable.Close("dtSortCodesTemp")
+
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadSortCodes.End
+
+Program.Sub.LoadOperations.Start
+'load the new sort codes for this requirement ID
+
+F.Intrinsic.Control.Try
+
+V.Local.sSQL.Declare(String)
+V.Local.sFilter.Declare(String)
+V.Local.iCounter.Declare(Long)
+V.Local.sValues.Declare(String)
+
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+
+F.Intrinsic.String.Build("select OPERATION_ID, RTRIM(DESCRIPTION) DESCRIPTION, RTRIM(TYPE) TYPE, RTRIM(MODE) MODE, RTRIM(INSERT_TYPE) INSERT_TYPE, RTRIM(VALUE) VALUE, RTRIM(COMMENTS) COMMENTS from GCG_4401_OPERATIONS where REQUIREMENT_ID = {0}", V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, V.Local.sSQL)
+
+F.Data.DataTable.CreateFromSQL("dtOperationsTemp", "Con", V.Local.sSQL)
+F.Data.DataTable.AddColumn("dtOperationsTemp", "INSERT_VALUES", "String")
+
+'now load the insert values
+F.Intrinsic.String.Build("select OPERATION_ID, IF(Quantity is null, RTRIM(VALUE), RTRIM(VALUE) + ', ' + Cast(Quantity as Char)) VALUE from GCG_4401_INSERT where REQUIREMENT_ID = {0}", V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, V.Local.sSQL)
+F.Data.DataTable.CreateFromSQL("dtOperationInsertValuesTemp", "Con", V.Local.sSQL)
+
+'grab the insert values for each operation
+F.Data.DataView.Create("dtOperationInsertValuesTemp", "dvOperationsInsertValuesTemp", 22)
+F.Intrinsic.Control.For(V.Local.iCounter, 0, V.DataTable.dtOperationsTemp.RowCount--, 1)
+	F.Intrinsic.String.Build("[OPERATION_ID] = {0}", V.DataTable.dtOperationsTemp(V.Local.iCounter).OPERATION_ID!FieldValLong, V.Local.sFilter)
+	F.Data.DataView.SetFilter("dtOperationInsertValuesTemp", "dvOperationsInsertValuesTemp", V.Local.sFilter)
+	
+	F.Intrinsic.Control.If(V.DataView.dtOperationInsertValuesTemp!dvOperationsInsertValuesTemp.RowCount, >, 0)
+		F.Data.DataView.ToString("dtOperationInsertValuesTemp", "dvOperationsInsertValuesTemp", "VALUE", "***NODELIMITER***", ";", V.Local.sValues)
+		F.Data.DataTable.SetValue("dtOperationsTemp", V.Local.iCounter, "INSERT_VALUES", V.Local.sValues)
+	F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.Next(V.Local.iCounter)
+F.Data.DataView.Close("dtOperationInsertValuesTemp", "dvOperationsInsertValuesTemp")
+F.Data.DataTable.Close("dtOperationInsertValuesTemp")
+
+'clear old records, merge new ones in 
+F.Data.DataTable.DeleteRow("dtOperations")
+F.Data.DataTable.Merge("dtOperationsTemp", "dtOperations", False, 2)
+F.Data.DataTable.Close("dtOperationsTemp")
+
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+
+F.Intrinsic.Control.CallSub(ToggleOperationHeaderControlsEnabled, "ENABLED", False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadOperations.End
+
+Program.Sub.cmdRequirementBrowser_Click.Start
+'browser for requirement IDs
+
+F.Intrinsic.Control.Try
+
+V.Local.sRet.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.sWidths.Declare(String)
+
+V.Local.sTitles.Set("ID*!*Description")
+F.Intrinsic.String.Split(V.Local.sTitles, "*!*", V.Local.sTitles)
+
+V.Local.sWidths.Set("60*!*200")
+F.Intrinsic.String.Split(V.Local.sWidths, "*!*", V.Local.sWidths)
+
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+F.Intrinsic.UI.Browser("Sort Codes", "Con", "Select REQUIREMENT_ID, RTRIM(DESCRIPTION) DESCRIPTION from GCG_4401_REQUIREMENT order by REQUIREMENT_ID", V.Local.sTitles, V.Local.sWidths, V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet.IsNotCancel)
+	F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+	V.Global.iRequirementID.Set(V.Local.sRet(0))
+	GUI.FormRequirementMaintenance.txtRequirementID.Text(V.Local.sRet(0))
+	GUI.FormRequirementMaintenance.txtRequirementDescription.Text(V.Local.sRet(1))
+	F.Intrinsic.Control.CallSub(LoadRequirement)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdRequirementBrowser_Click.End
+
+Program.Sub.cmdNewRequirement_Click.Start
+'grab the top open ID, create a new record
+
+F.Intrinsic.Control.Try
+
+V.Local.iID.Declare(Long, 1)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+F.ODBC.Connection!Con.ExecuteAndReturn("select MAX(REQUIREMENT_ID) from GCG_4401_REQUIREMENT", V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF.Not)
+	F.Intrinsic.Math.Add(V.Local.sRet.Long, 1, V.Local.iID)
+F.Intrinsic.Control.EndIf
+
+F.Data.DataTable.Create("dtSaveRequirementTemp")
+F.Data.DataTable.AddColumn("dtSaveRequirementTemp", "REQUIREMENT_ID", "Long")
+F.Data.DataTable.AddColumn("dtSaveRequirementTemp", "CREATED_BY", "String")
+F.Data.DataTable.AddColumn("dtSaveRequirementTemp", "CREATED_AT", "Date")
+F.Data.DataTable.AddColumn("dtSaveRequirementTemp", "MODIFIED_BY", "String")
+F.Data.DataTable.AddColumn("dtSaveRequirementTemp", "MODIFIED_AT", "Date")
+F.Data.DataTable.AddRow("dtSaveRequirementTemp", "REQUIREMENT_ID", V.Local.iID, "CREATED_BY", V.Caller.User.Trim, "CREATED_AT", V.Ambient.Now, "MODIFIED_BY", V.Caller.User.Trim, "MODIFIED_AT", V.Ambient.Now)
+F.Data.DataTable.SaveToDB("dtSaveRequirementTemp", "Con", "GCG_4401_REQUIREMENT", "REQUIREMENT_ID", 128)
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+
+V.Global.iRequirementID.Set(V.Local.iID)
+GUI.FormRequirementMaintenance.txtRequirementID.Text(V.Local.iID)
+F.Intrinsic.Control.CallSub(LoadRequirement)
+V.Global.bUnsavedRequirement.Set(True)
+V.Global.bNewRequirement.Set(True)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdNewRequirement_Click.End
+
+Program.Sub.cmdSaveRequirement_Click.Start
+'save the requirement on the screen
+
+F.Intrinsic.Control.Try
+
+'build a temporary table for save to db
+F.Data.DataTable.Create("dtSaveRequirementTemp")
+F.Data.DataTable.AddColumn("dtSaveRequirementTemp", "REQUIREMENT_ID", "Long")
+F.Data.DataTable.AddColumn("dtSaveRequirementTemp", "MODIFIED_BY", "String")
+F.Data.DataTable.AddColumn("dtSaveRequirementTemp", "MODIFIED_AT", "Date")
+F.Data.DataTable.AddColumn("dtSaveRequirementTemp", "DESCRIPTION", "String")
+F.Data.DataTable.AddRow("dtSaveRequirementTemp", "REQUIREMENT_ID", V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, "MODIFIED_BY", V.Caller.User.Trim, "MODIFIED_AT", V.Ambient.Now, "DESCRIPTION", V.Screen.FormRequirementMaintenance!txtRequirementDescription.Text.Trim)
+
+'save it to the database
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+F.Data.DataTable.SaveToDB("dtSaveRequirementTemp", "Con", "GCG_4401_REQUIREMENT", "REQUIREMENT_ID", 256)
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+
+F.Intrinsic.UI.Msgbox("Requirement Saved Successfully", "Requirement Save")
+V.Global.bUnsavedRequirement.Set(False)
+V.Global.bNewRequirement.Set(False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdSaveRequirement_Click.End
+
+Program.Sub.txtCustomer_LostFocus.Start
+'load the customer entered
+
+F.Intrinsic.Control.Try
+
+V.Local.sCustomer.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!txtCustomer.Text.Trim, !=, "")
+	V.Local.sCustomer.Set(V.Screen.FormRequirementMaintenance!txtCustomer.Text.Trim)
+	V.Local.sCustomer.Set(V.Local.sCustomer.UCase)
+	F.Intrinsic.Control.If(V.Local.sCustomer, !=, V.Global.sCustomer)
+		F.Intrinsic.String.Build("select RTRIM(CUSTOMER), RTRIM(NAME_CUSTOMER) from V_CUSTOMER_MASTER where CUSTOMER = '{0}'", V.Local.sCustomer, V.Local.sSQL)
+		F.Intrinsic.Control.CallSub(Connection, "Connect", True)
+		F.ODBC.Connection!Con.ExecuteAndReturn(V.Local.sSQL, V.Local.sRet)
+		F.Intrinsic.Control.CallSub(Connection, "Connect", False)
+		
+		F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF, =, True)
+			F.Intrinsic.UI.Msgbox("Invalid customer entered.")
+			V.Global.sCustomer.Set("")
+			GUI.FormRequirementMaintenance.txtCustomer.Text("")
+			GUI.FormRequirementMaintenance.txtCustomerName.Text("")
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+			V.Global.sCustomer.Set(V.Local.sRet(0))
+			GUI.FormRequirementMaintenance.txtCustomer.Text(V.Local.sRet(0))
+			GUI.FormRequirementMaintenance.txtCustomerName.Text(V.Local.sRet(1))
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	V.Global.sCustomer.Set("")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.txtCustomer_LostFocus.End
+
+Program.Sub.txtSortCode_LostFocus.Start
+'load the sort code entered
+
+F.Intrinsic.Control.Try
+
+V.Local.sSortCode.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!txtSortCode.Text.Trim, !=, "")
+	V.Local.sSortCode.Set(V.Screen.FormRequirementMaintenance!txtSortCode.Text.Trim)
+	V.Local.sSortCode.Set(V.Local.sSortCode.UCase)
+	F.Intrinsic.Control.If(V.Local.sSortCode, !=, V.Global.sSortCode)
+		F.Intrinsic.String.Build("Select RTRIM(SORT_CODE), RTRIM(DESCR) from V_INV_SORT where SORT_CODE = '{0}'", V.Local.sSortCode, V.Local.sSQL)
+		F.Intrinsic.Control.CallSub(Connection, "Connect", True)
+		F.ODBC.Connection!Con.ExecuteAndReturn(V.Local.sSQL, V.Local.sRet)
+		F.Intrinsic.Control.CallSub(Connection, "Connect", False)
+		
+		F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF, =, True)
+			F.Intrinsic.UI.Msgbox("Invalid sort code entered.")
+			V.Global.sSortCode.Set("")
+			GUI.FormRequirementMaintenance.txtSortCode.Text("")
+			GUI.FormRequirementMaintenance.txtSortCodeDescription.Text("")
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+			V.Global.sSortCode.Set(V.Local.sRet(0))
+			GUI.FormRequirementMaintenance.txtSortCode.Text(V.Local.sRet(0))
+			GUI.FormRequirementMaintenance.txtSortCodeDescription.Text(V.Local.sRet(1))
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	V.Global.sSortCode.Set("")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.txtSortCode_LostFocus.End
+
+Program.Sub.cmdCustomerBrowser_Click.Start
+'browser for customers
+
+F.Intrinsic.Control.Try
+
+V.Local.sRet.Declare(String)
+V.Local.iRet.Declare(Long)
+V.Local.iCounter.Declare(Long)
+V.Local.sTemp.Declare(String)
+
+F.Intrinsic.UI.SetBrowserMultiSelect(True)
+F.Intrinsic.UI.Browser(205, "", V.Local.sRet)
+F.Intrinsic.UI.SetBrowserMultiSelect(False)
+F.Intrinsic.Control.If(V.Local.sRet.IsNotCancel)
+	F.Intrinsic.String.Split(V.Local.sRet, "!*!", V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet.UBound, >, 0)
+		F.Intrinsic.UI.Msgbox("Multiple items were selected. Add them all now?", "Browser Selection", 4, V.Local.iRet)
+		F.Intrinsic.Control.If(V.Local.iRet, =, V.Ambient.MsgBoxYes)
+			F.Intrinsic.Control.For(V.Local.iCounter, 0, V.Local.sRet.UBound, 1)
+				F.Intrinsic.String.Split(V.Local.sRet(V.Local.iCounter), "*!*", V.Local.sTemp)
+				GUI.FormRequirementMaintenance.txtCustomer.Text(V.Local.sTemp(0))
+				GUI.FormRequirementMaintenance.txtCustomerName.Text(V.Local.sTemp(1))
+				F.Intrinsic.Control.CallSub(cmdAddCustomer_Click)
+			F.Intrinsic.Control.Next(V.Local.iCounter)
+		F.Intrinsic.Control.EndIf
+		V.Global.sCustomer.Set("")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+		V.Global.sCustomer.Set(V.Local.sRet(0))
+		GUI.FormRequirementMaintenance.txtCustomer.Text(V.Local.sRet(0))
+		GUI.FormRequirementMaintenance.txtCustomerName.Text(V.Local.sRet(1))
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdCustomerBrowser_Click.End
+
+Program.Sub.cmdAddCustomer_Click.Start
+V.Local.sFilter.Declare(String)
+
+F.Intrinsic.Control.Try
+
+'add the entered customer to the customer list
+F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!txtCustomer.Text.Trim, !=, "")
+	
+	'check if it is already in the list
+	F.Intrinsic.String.Build("[CUSTOMER] = '{0}'", V.Screen.FormRequirementMaintenance!txtCustomer.Text.Trim, V.Local.sFilter)
+	F.Data.DataView.Create("dtCustomers", "dvCustomerCheck", 22, V.Local.sFilter, "")
+	F.Intrinsic.Control.If(V.DataView.dtCustomers!dvCustomerCheck.RowCount, <, 1)
+		F.Data.DataTable.AddRow("dtCustomers", "CUSTOMER", V.Screen.FormRequirementMaintenance!txtCustomer.Text.Trim, "CUSTOMER_NAME", V.Screen.FormRequirementMaintenance!txtCustomerName.Text.Trim, "ADDED_AT", V.Ambient.Now)
+		
+		'save to the database
+		F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+		F.Data.DataTable.CreateFromSQL("dtSaveCustomerTemp", "Con", "select * from GCG_4401_CUSTOMERS where RECORD_ID = -1")
+		F.Data.DataTable.DeleteRow("dtSaveCustomerTemp")
+		
+		F.Data.DataTable.AddRow("dtSaveCustomerTemp", "REQUIREMENT_ID", V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, "CUSTOMER", V.Screen.FormRequirementMaintenance!txtCustomer.Text.Trim, "ADDED_BY", V.Caller.User.Trim, "ADDED_AT", V.Ambient.Now)
+		F.Data.DataTable.SaveToDB("dtSaveCustomerTemp", "Con", "GCG_4401_CUSTOMERS", "REQUIREMENT_ID*!*CUSTOMER", 128)
+		F.Data.DataTable.Close("dtSaveCustomerTemp")
+		F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+		V.Global.bUnsavedRequirement.Set(True)
+	F.Intrinsic.Control.EndIf
+	F.Data.DataView.Close("dtCustomers", "dvCustomerCheck")
+	
+	'clear old values
+	GUI.FormRequirementMaintenance.txtCustomer.Text("")
+	GUI.FormRequirementMaintenance.txtCustomerName.Text("")
+	V.Global.sCustomer.Set("")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdAddCustomer_Click.End
+
+Program.Sub.cmdSortCodeBrowser_Click.Start
+'browser for sort codes
+
+F.Intrinsic.Control.Try
+
+V.Local.sRet.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.sWidths.Declare(String)
+V.Local.iRet.Declare(Long)
+V.Local.iCounter.Declare(Long)
+V.Local.sTemp.Declare(String)
+
+V.Local.sTitles.Set("Sort Code*!*Description")
+F.Intrinsic.String.Split(V.Local.sTitles, "*!*", V.Local.sTitles)
+
+V.Local.sWidths.Set("60*!*200")
+F.Intrinsic.String.Split(V.Local.sWidths, "*!*", V.Local.sWidths)
+
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+F.Intrinsic.UI.SetBrowserMultiSelect(True)
+F.Intrinsic.UI.Browser("Sort Codes", "Con", "Select RTRIM(SORT_CODE), RTRIM(DESCR) from V_INV_SORT order by SORT_CODE", V.Local.sTitles, V.Local.sWidths, V.Local.sRet)
+F.Intrinsic.UI.SetBrowserMultiSelect(False)
+F.Intrinsic.Control.If(V.Local.sRet.IsNotCancel)
+	F.Intrinsic.String.Split(V.Local.sRet, "!*!", V.Local.sRet)
+	
+	F.Intrinsic.Control.If(V.Local.sRet.UBound, >, 0)
+		F.Intrinsic.UI.Msgbox("Multiple items were selected. Add them all now?", "Browser Selection", 4, V.Local.iRet)
+		F.Intrinsic.Control.If(V.Local.iRet, =, V.Ambient.MsgBoxYes)
+			F.Intrinsic.Control.For(V.Local.iCounter, 0, V.Local.sRet.UBound, 1)
+				F.Intrinsic.String.Split(V.Local.sRet(V.Local.iCounter), "*!*", V.Local.sTemp)
+				GUI.FormRequirementMaintenance.txtSortCode.Text(V.Local.sTemp(0))
+				GUI.FormRequirementMaintenance.txtSortCodeDescription.Text(V.Local.sTemp(1))
+				F.Intrinsic.Control.CallSub(cmdAddSortCode_Click)
+			F.Intrinsic.Control.Next(V.Local.iCounter)
+		F.Intrinsic.Control.EndIf
+		V.Global.sSortCode.Set("")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+		V.Global.sSortCode.Set(V.Local.sRet(0))
+		GUI.FormRequirementMaintenance.txtSortCode.Text(V.Local.sRet(0))
+		GUI.FormRequirementMaintenance.txtSortCodeDescription.Text(V.Local.sRet(1))
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdSortCodeBrowser_Click.End
+
+Program.Sub.cmdAddSortCode_Click.Start
+V.Local.sFilter.Declare(String)
+
+F.Intrinsic.Control.Try
+
+'add the entered sort code to the sort code list
+F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!txtSortCode.Text.Trim, !=, "")
+	
+	'check if it is already in the list
+	F.Intrinsic.String.Build("[SORT_CODE] = '{0}'", V.Screen.FormRequirementMaintenance!txtSortCode.Text.Trim, V.Local.sFilter)
+	F.Data.DataView.Create("dtSortCodes", "dvSortCodeCheck", 22, V.Local.sFilter, "")
+	F.Intrinsic.Control.If(V.DataView.dtSortCodes!dvSortCodeCheck.RowCount, <, 1)
+		F.Data.DataTable.AddRow("dtSortCodes", "SORT_CODE", V.Screen.FormRequirementMaintenance!txtSortCode.Text.Trim, "DESCRIPTION", V.Screen.FormRequirementMaintenance!txtSortCodeDescription.Text.Trim, "ADDED_AT", V.Ambient.Now)
+		
+		'save to the database
+		F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+		F.Data.DataTable.CreateFromSQL("dtSaveSortCodeTemp", "Con", "select * from GCG_4401_SORT_CODES where RECORD_ID = -1")
+		F.Data.DataTable.DeleteRow("dtSaveSortCodeTemp")
+		
+		F.Data.DataTable.AddRow("dtSaveSortCodeTemp", "REQUIREMENT_ID", V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, "SORT_CODE", V.Screen.FormRequirementMaintenance!txtSortCode.Text.Trim, "ADDED_BY", V.Caller.User.Trim, "ADDED_AT", V.Ambient.Now)
+		F.Data.DataTable.SaveToDB("dtSaveSortCodeTemp", "Con", "GCG_4401_SORT_CODES", "REQUIREMENT_ID*!*SORT_CODE", 128)
+		F.Data.DataTable.Close("dtSaveSortCodeTemp")
+		F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+		V.Global.bUnsavedRequirement.Set(True)
+	F.Intrinsic.Control.EndIf
+	F.Data.DataView.Close("dtSortCodes", "dvSortCodeCheck")
+	
+	'clear old values
+	GUI.FormRequirementMaintenance.txtSortCode.Text("")
+	GUI.FormRequirementMaintenance.txtSortCodeDescription.Text("")
+	V.Global.sSortCode.Set("")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdAddSortCode_Click.End
+
+Program.Sub.gsgcCustomers_RowCellClick.Start
+'delete the selected row
+
+F.Intrinsic.Control.Try
+
+V.Local.sSQL.Declare(String)
+
+F.Intrinsic.Control.If(V.Args.Column.Trim, =, "DELETE")
+	'delete from the database
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+	F.Intrinsic.String.Build("delete from GCG_4401_CUSTOMERS where REQUIREMENT_ID = {0} and CUSTOMER = '{1}'", V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, V.DataTable.dtCustomers(V.Args.RowIndex).CUSTOMER!FieldValTrim, V.Local.sSQL)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+	
+	'delete from the datatable
+	F.Data.DataTable.DeleteRow("dtCustomers", V.Args.RowIndex)
+	F.Data.DataTable.AcceptChanges("dtCustomers")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.gsgcCustomers_RowCellClick.End
+
+Program.Sub.gsgcSortCodes_RowCellClick.Start
+'delete the selected row
+
+F.Intrinsic.Control.Try
+
+V.Local.sSQL.Declare(String)
+
+F.Intrinsic.Control.If(V.Args.Column.Trim, =, "DELETE")
+	'delete from the database
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+	F.Intrinsic.String.Build("delete from GCG_4401_SORT_CODES where REQUIREMENT_ID = {0} and SORT_CODE = '{1}'", V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, V.DataTable.dtSortCodes(V.Args.RowIndex).SORT_CODE!FieldValTrim, V.Local.sSQL)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+	
+	'delete from the datatable
+	F.Data.DataTable.DeleteRow("dtSortCodes", V.Args.RowIndex)
+	F.Data.DataTable.AcceptChanges("dtSortCodes")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.gsgcSortCodes_RowCellClick.End
+
+Program.Sub.SetIcon.Start
+'set the icon for all screens
+
+F.Intrinsic.Control.Try
+
+V.Local.sForm.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.sIcon.Declare(String)
+V.Local.iCounter.Declare(Long)
+
+F.Intrinsic.String.Build("{0}\ART\gss2.ico",V.Caller.GlobalDir,v.Local.sIcon)
+F.Intrinsic.File.Exists(V.Local.sIcon, V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists.Not)
+	F.Intrinsic.String.Build("{0}\GAB\GAS\gss2.ico",V.Caller.PluginsDir,v.Local.sIcon)
+	F.Intrinsic.File.Exists(V.Local.sIcon, V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists.Not)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.UI.GetFormList(V.Local.sForm)
+F.Intrinsic.String.Split(V.Local.sForm, "*!*", V.Local.sForm)
+
+F.Intrinsic.Control.For(V.Local.iCounter, 0, V.Local.sForm.UBound, 1)
+	Gui.[V.Local.sForm(V.Local.iCounter)]..Icon(V.Local.sIcon)
+F.Intrinsic.Control.Next(V.Local.iCounter)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.SetIcon.End
+
+Program.Sub.Connection.Start
+'open or close connection if necessary, keep track of all connections
+
+F.Intrinsic.Control.Try
+
+V.Static.iConnections.Declare(Long)
+
+F.Intrinsic.Control.If(V.Args.Connect)
+	F.Intrinsic.Control.If(V.Static.iConnections, =, 0)
+		F.ODBC.Connection!Con.OpenCompanyConnection
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Math.Add(V.Static.iConnections, 1, V.Static.iConnections)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.If(V.Static.iConnections, >, 0)
+		F.Intrinsic.Math.Sub(V.Static.iConnections, 1, V.Static.iConnections)
+		
+		F.Intrinsic.Control.If(V.Static.iConnections, =, 0)
+			F.ODBC.Connection!Con.Close
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.Connection.End
+
+Program.Sub.txtRequirementID_LostFocus.Start
+'load the requirement entered
+
+F.Intrinsic.Control.Try
+
+V.Local.iRequirement.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, !=, "")
+	V.Local.iRequirement.Set(V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim)
+	F.Intrinsic.Control.If(V.Local.iRequirement, !=, V.Global.iRequirementID)
+	
+		F.Intrinsic.String.Build("select REQUIREMENT_ID, RTRIM(DESCRIPTION) from GCG_4401_REQUIREMENT where REQUIREMENT_ID = {0}", V.Local.iRequirement, V.Local.sSQL)
+		F.Intrinsic.Control.CallSub(Connection, "Connect", True)
+		F.ODBC.Connection!Con.ExecuteAndReturn(V.Local.sSQL, V.Local.sRet)
+		F.Intrinsic.Control.CallSub(Connection, "Connect", False)
+		
+		F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF, =, True)
+			F.Intrinsic.UI.Msgbox("Invalid Requirement ID entered.")
+			V.Global.iRequirementID.Set(-1)
+			GUI.FormRequirementMaintenance.txtRequirementID.Text("")
+			GUI.FormRequirementMaintenance.txtRequirementDescription.Text("")
+			F.Intrinsic.Control.CallSub(cmdClear_Click)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+			V.Global.iRequirementID.Set(V.Local.sRet(0).Long)
+			GUI.FormRequirementMaintenance.txtRequirementID.Text(V.Local.sRet(0))
+			GUI.FormRequirementMaintenance.txtRequirementDescription.Text(V.Local.sRet(1))
+			F.Intrinsic.Control.CallSub(LoadRequirement)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.If(V.Global.iOperationID, !=, -1)
+		F.Intrinsic.Control.CallSub(cmdClear_Click)
+	F.Intrinsic.Control.EndIf
+	V.Global.iRequirementID.Set(-1)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.txtRequirementID_LostFocus.End
+
+Program.Sub.cmdNewOperation_Click.Start
+'grab the top open ID, create a new record
+
+F.Intrinsic.Control.Try
+
+V.Local.iID.Declare(Long, 1)
+V.Local.sRet.Declare(String)
+V.Local.sSQL.Declare(String)
+
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+
+'grab top id
+F.Intrinsic.String.Build("select MAX(OPERATION_ID) from GCG_4401_OPERATIONS where REQUIREMENT_ID = {0}", V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, V.Local.sSQL)
+F.ODBC.Connection!Con.ExecuteAndReturn(V.Local.sSQL, V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF.Not)
+	F.Intrinsic.Math.Add(V.Local.sRet.Long, 1, V.Local.iID)
+F.Intrinsic.Control.EndIf
+
+'create temporary table for save to db
+F.Data.DataTable.Create("dtSaveOperationTemp")
+F.Data.DataTable.AddColumn("dtSaveOperationTemp", "REQUIREMENT_ID", "Long")
+F.Data.DataTable.AddColumn("dtSaveOperationTemp", "ADDED_BY", "String")
+F.Data.DataTable.AddColumn("dtSaveOperationTemp", "ADDED_AT", "Date")
+F.Data.DataTable.AddColumn("dtSaveOperationTemp", "MODIFIED_BY", "String")
+F.Data.DataTable.AddColumn("dtSaveOperationTemp", "MODIFIED_AT", "Date")
+F.Data.DataTable.AddColumn("dtSaveOperationTemp", "OPERATION_ID", "Long")
+F.Data.DataTable.AddRow("dtSaveOperationTemp", "REQUIREMENT_ID", V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, "ADDED_BY", V.Caller.User.Trim, "ADDED_AT", V.Ambient.Now, "MODIFIED_BY", V.Caller.User.Trim, "MODIFIED_AT", V.Ambient.Now, "OPERATION_ID", V.Local.iID)
+
+'save to the database
+F.Data.DataTable.SaveToDB("dtSaveOperationTemp", "Con", "GCG_4401_OPERATIONS", "REQUIREMENT_ID*!*OPERATION_ID", 128)
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+
+'load the screen
+V.Global.iOperationID.Set(V.Local.iID)
+GUI.FormRequirementMaintenance.txtOperationID.Text(V.Local.iID)
+F.Intrinsic.Control.CallSub(LoadOperation)
+F.Intrinsic.Control.CallSub(CheckOperationSaveButton)
+V.Global.bNewOperation.Set(True)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdNewOperation_Click.End
+
+Program.Sub.LoadOperation.Start
+'load the selected operation onto the screen
+
+F.Intrinsic.Control.Try
+
+V.Local.sSQL.Declare(String)
+V.Local.sTemp.Declare(String)
+
+V.Global.bLoadingOperation.Set(True)
+
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+
+F.Intrinsic.String.Build("select RTRIM(DESCRIPTION) DESCRIPTION, RTRIM(TYPE) TYPE, RTRIM(MODE) MODE, RTRIM(INSERT_TYPE) INSERT_TYPE, RTRIM(VALUE) VALUE, RTRIM(COMMENTS) COMMENTS from GCG_4401_OPERATIONS where REQUIREMENT_ID = {0} and OPERATION_ID = {1}", V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, V.Screen.FormRequirementMaintenance!txtOperationID.Text.Trim, V.Local.sSQL)
+F.Data.DataTable.CreateFromSQL("dtOperationTemp", "Con", V.Local.sSQL)
+
+'screen stuff
+F.Intrinsic.Control.If(V.DataTable.dtOperationTemp.RowCount, >, 0)
+	GUI.FormRequirementMaintenance.txtOperationDescription.Text(V.DataTable.dtOperationTemp(0).DESCRIPTION!FieldValTrim)
+	
+	V.Local.sTemp.Set(V.DataTable.dtOperationTemp(0).TYPE!FieldValTrim)
+	GUI.FormRequirementMaintenance.ddlType.Text(V.Local.sTemp.PCase)
+	
+	V.Local.sTemp.Set(V.DataTable.dtOperationTemp(0).MODE!FieldValTrim)
+	GUI.FormRequirementMaintenance.ddlMode.Text(V.Local.sTemp.PCase)
+	
+	V.Local.sTemp.Set(V.DataTable.dtOperationTemp(0).INSERT_TYPE!FieldValTrim)
+	GUI.FormRequirementMaintenance.ddlInsertType.Text(V.Local.sTemp.PCase)
+	
+	GUI.FormRequirementMaintenance.txtValue.Text(V.DataTable.dtOperationTemp(0).VALUE!FieldValTrim)
+	GUI.FormRequirementMaintenance.txtComments.Text(V.DataTable.dtOperationTemp(0).COMMENTS!FieldValTrim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+
+F.Intrinsic.Control.CallSub(LoadOperationInsertValues)
+
+F.Intrinsic.Control.CallSub(ToggleOperationHeaderControlsEnabled, "Enabled", True)
+
+V.Global.bLoadingOperation.Set(False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadOperation.End
+
+Program.Sub.LoadOperationInsertValues.Start
+'load the insert values datatable
+
+F.Intrinsic.Control.Try
+
+V.Local.sSQL.Declare(String)
+
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+
+'grab insert values for this operation
+F.Intrinsic.String.Build("select RTRIM(VALUE) VALUE, QUANTITY from GCG_4401_INSERT where REQUIREMENT_ID = {0} and OPERATION_ID = {1}", V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, V.Screen.FormRequirementMaintenance!txtOperationID.Text.Trim, V.Local.sSQL)
+
+'merge into the main datatable
+F.Data.DataTable.CreateFromSQL("dtOperationInsertValuesTemp", "Con", V.Local.sSQL)
+F.Data.DataTable.DeleteRow("dtInsertValues")
+F.Data.DataTable.Merge("dtOperationInsertValuesTemp", "dtInsertValues", True, 2)
+F.Data.DataTable.Close("dtOperationInsertValuesTemp")
+
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadOperationInsertValues.End
+
+Program.Sub.cmdSaveOperation_Click.Start
+'save the selected operation
+
+F.Intrinsic.Control.Try
+
+V.Local.sType.Declare(String)
+V.Local.sMode.Declare(String)
+V.Local.sInsertType.Declare(String)
+V.Local.sInsertValues.Declare(String)
+V.Local.sFilter.Declare(String)
+
+'run checks
+F.Intrinsic.Control.CallSub(OperationSaveCheck)
+F.Intrinsic.Control.If(V.Global.bCancel)
+	F.Intrinsic.UI.Msgbox("Please enter all fields before saving.")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+V.Global.bLoadingOperation.Set(True)
+
+'create a temporary blank datatable for save to db
+F.Data.DataTable.Create("dtSaveOperationTemp")
+F.Data.DataTable.AddColumn("dtSaveOperationTemp", "REQUIREMENT_ID", "Long")
+F.Data.DataTable.AddColumn("dtSaveOperationTemp", "OPERATION_ID", "Long")
+F.Data.DataTable.AddColumn("dtSaveOperationTemp", "DESCRIPTION", "String")
+F.Data.DataTable.AddColumn("dtSaveOperationTemp", "TYPE", "String")
+F.Data.DataTable.AddColumn("dtSaveOperationTemp", "MODE", "String")
+F.Data.DataTable.AddColumn("dtSaveOperationTemp", "INSERT_TYPE", "String")
+F.Data.DataTable.AddColumn("dtSaveOperationTemp", "VALUE", "String")
+F.Data.DataTable.AddColumn("dtSaveOperationTemp", "COMMENTS", "String")
+F.Data.DataTable.AddColumn("dtSaveOperationTemp", "MODIFIED_BY", "String")
+F.Data.DataTable.AddColumn("dtSaveOperationTemp", "MODIFIED_AT", "Date")
+
+V.Local.sType.Set(V.Screen.FormRequirementMaintenance!ddlType.Text.Trim)
+V.Local.sMode.Set(V.Screen.FormRequirementMaintenance!ddlMode.Text.Trim)
+V.Local.sInsertType.Set(V.Screen.FormRequirementMaintenance!ddlInsertType.Text.Trim)
+
+F.Data.DataTable.AddRow("dtSaveOperationTemp", "REQUIREMENT_ID", V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, "OPERATION_ID", V.Screen.FormRequirementMaintenance!txtOperationID.Text.Trim, "DESCRIPTION", V.Screen.FormRequirementMaintenance!txtOperationDescription.Text.Trim, "TYPE", V.Local.sType, "MODE", V.Local.sMode, "INSERT_TYPE", V.Local.sInsertType, "VALUE", V.Screen.FormRequirementMaintenance!txtValue.Text.Trim, "COMMENTS", V.Screen.FormRequirementMaintenance!txtComments.Text.Trim, "MODIFIED_BY", V.Caller.User, "MODIFIED_AT", V.Ambient.Now)
+
+'save to the database
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+F.Data.DataTable.SaveToDB("dtSaveOperationTemp", "Con", "GCG_4401_OPERATIONS", "REQUIREMENT_ID*!*OPERATION_ID", 256)
+F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+
+'add insert values
+F.Data.DataTable.AddColumn("dtSaveOperationTemp", "INSERT_VALUES", "String")
+
+F.Data.DataView.Create("dtInsertValues", "dvInsertValuesTemp", 22)
+F.Intrinsic.Control.If(V.Local.sType, =, "Material")
+	F.Data.DataView.ToString("dtInsertValues", "dvInsertValuesTemp", "VALUE*!*QUANTITY", ", ", ";", V.Local.sInsertValues)
+F.Intrinsic.Control.Else
+	F.Data.DataView.ToString("dtInsertValues", "dvInsertValuesTemp", "VALUE", "***NODELIMITER***", ";", V.Local.sInsertValues)
+F.Intrinsic.Control.EndIf
+F.Data.DataView.Close("dtInsertValues", "dvInsertValuesTemp")
+
+F.Data.DataTable.SetValue("dtSaveOperationTemp", 0, "INSERT_VALUES", V.Local.sInsertValues)
+
+'if this row already exists in the grid, delete it
+F.Intrinsic.String.Build("[OPERATION_ID] = {0}", V.Screen.FormRequirementMaintenance!txtOperationID.Text.Trim, V.Local.sFilter)
+F.Data.DataView.Create("dtOperations", "dvOperationsDelete", 22, V.Local.sFilter, "")
+F.Intrinsic.Control.If(V.DataView.dtOperations!dvOperationsDelete.RowCount, >, 0)
+	F.Data.DataView.DeleteRow("dtOperations", "dvOperationsDelete", 0)
+F.Intrinsic.Control.EndIf
+F.Data.DataView.Close("dtOperations", "dvOperationsDelete")
+
+'add to the grid on the screen
+F.Data.DataTable.Merge("dtSaveOperationTemp", "dtOperations", False, 2)
+F.Data.DataTable.AcceptChanges("dtOperations")
+
+F.Data.DataTable.Close("dtSaveOperationTemp")
+
+F.Intrinsic.UI.Msgbox("Operation Saved Successfully", "Operation Save")
+
+F.Intrinsic.Control.CallSub(cmdClearOperation_Click)
+
+V.Global.bLoadingOperation.Set(False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdSaveOperation_Click.End
+
+Program.Sub.OperationSaveCheck.Start
+F.Intrinsic.Control.Try
+
+V.Local.bFailed.Declare(Boolean, False)
+
+F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!ddlType.Text.Trim, =, "")
+	V.Local.bFailed.Set(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!ddlMode.Text.Trim, =, "")
+	V.Local.bFailed.Set(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!ddlInsertType.Enabled)
+	F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!ddlInsertType.Text.Trim, =, "")
+		V.Local.bFailed.Set(True)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!txtValue.Enabled)
+	F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!txtValue.Text.Trim, =, "")
+		V.Local.bFailed.Set(True)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!txtComments.Enabled)
+	F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!txtComments.Text.Trim, =, "")
+		V.Local.bFailed.Set(True)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!gsgcInsertValues.Enabled)
+	F.Intrinsic.Control.If(V.DataTable.dtInsertValues.RowCount, <, 1)
+		V.Local.bFailed.Set(True)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.bFailed)
+	V.Global.bCancel.Set(True)
+F.Intrinsic.Control.Else
+	V.Global.bCancel.Set(False)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.OperationSaveCheck.End
+
+Program.Sub.cmdClearOperation_Click.Start
+'clear the operations section
+
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.Global.bCalledFromDelete.Not)
+	F.Intrinsic.Control.CallSub(CheckOperationSaved)
+	F.Intrinsic.Control.If(V.Global.bCancel)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+V.Global.bLoadingOperation.Set(True)
+
+V.Global.iOperationID.Set(-1)
+GUI.FormRequirementMaintenance.txtOperationID.Text("")
+
+'other clearing here
+GUI.FormRequirementMaintenance.txtOperationDescription.Text("")
+GUI.FormRequirementMaintenance.ddlType.ListIndex(-1)
+
+V.Global.bUnsavedOperation.Set(False)
+F.Intrinsic.Control.CallSub(ToggleOperationHeaderControlsEnabled, "Enabled", False)
+
+V.Global.bLoadingOperation.Set(False)
+V.Global.bNewOperation.Set(False)
+V.Global.bCancel.Set(False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdClearOperation_Click.End
+
+Program.Sub.cmdClear_Click.Start
+'clear the entire screen
+
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.Global.bCalledFromDelete.Not)
+	F.Intrinsic.Control.CallSub(CheckRequirementSaved)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(cmdClearOperation_Click)
+F.Intrinsic.Control.If(V.Global.bCancel)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Data.DataTable.DeleteRow("dtOperations")
+F.Data.DataTable.AcceptChanges("dtOperations")
+
+V.Global.iRequirementID.Set(-1)
+GUI.FormRequirementMaintenance.txtRequirementID.Text("")
+GUI.FormRequirementMaintenance.txtRequirementDescription.Text("")
+
+GUI.FormRequirementMaintenance.txtCustomer.Text("")
+GUI.FormRequirementMaintenance.txtCustomerName.Text("")
+GUI.FormRequirementMaintenance.txtSortCode.Text("")
+GUI.FormRequirementMaintenance.txtSortCodeDescription.Text("")
+
+F.Data.DataTable.DeleteRow("dtCustomers")
+F.Data.DataTable.AcceptChanges("dtCustomers")
+F.Data.DataTable.DeleteRow("dtSortCodes")
+F.Data.DataTable.AcceptChanges("dtSortCodes")
+
+F.Intrinsic.Control.CallSub(ToggleHeaderControlsEnabled, "Enabled", False)
+
+V.Global.bNewOperation.Set(False)
+V.Global.bUnsavedOperation.Set(False)
+V.Global.bNewRequirement.Set(False)
+V.Global.bUnsavedRequirement.Set(False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdClear_Click.End
+
+Program.Sub.txtOperationID_LostFocus.Start
+'load the operation entered
+
+F.Intrinsic.Control.Try
+
+V.Local.iOperation.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.bSuccess.Declare(Boolean, False)
+
+F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!txtOperationID.Text.Trim, !=, "")
+	V.Local.iOperation.Set(V.Screen.FormRequirementMaintenance!txtOperationID.Text.Trim)
+	F.Intrinsic.Control.If(V.Local.iOperation, !=, V.Global.iOperationID)
+	
+		F.Intrinsic.String.Build("select OPERATION_ID from GCG_4401_OPERATIONS where REQUIREMENT_ID = {0} and OPERATION_ID = {1}", V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, V.Local.iOperation, V.Local.sSQL)
+		F.Intrinsic.Control.CallSub(Connection, "Connect", True)
+		F.ODBC.Connection!Con.ExecuteAndReturn(V.Local.sSQL, V.Local.sRet)
+		F.Intrinsic.Control.CallSub(Connection, "Connect", False)
+		
+		F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF, =, True)
+			F.Intrinsic.UI.Msgbox("Invalid Operation ID entered.")
+			GUI.FormRequirementMaintenance.txtOperationID.Text("")
+		F.Intrinsic.Control.Else
+			V.Local.bSuccess.Set(True)
+			V.Global.iOperationID.Set(V.Local.sRet.Long)
+			F.Intrinsic.Control.CallSub(CheckOperationSaved)
+			GUI.FormRequirementMaintenance.txtOperationID.Text(V.Local.sRet)
+			F.Intrinsic.Control.CallSub(LoadOperation)
+			V.Global.bUnsavedOperation.Set(False)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.bSuccess.Not)
+	F.Intrinsic.Control.If(V.Global.iOperationID, !=, -1)
+		F.Intrinsic.Control.CallSub(cmdClearOperation_Click)
+	F.Intrinsic.Control.EndIf
+	V.Global.iOperationID.Set(-1)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.txtOperationID_LostFocus.End
+
+Program.Sub.cmdAddInsertValue_Click.Start
+'add the insert value from the screen into the datatable
+
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!ddlType.Text.Trim, =, "Material")
+	F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!txtQuantity.Text.Trim, =, "")
+		F.Intrinsic.UI.Msgbox("Please enter a quantity first.")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!txtInsertValue.Text.Trim, !=, "")
+	
+	'create temporary datatable for save to db
+	F.Data.DataTable.Create("dtInsertValueSaveTemp")
+	F.Data.DataTable.AddColumn("dtInsertValueSaveTemp", "REQUIREMENT_ID", "Long")
+	F.Data.DataTable.AddColumn("dtInsertValueSaveTemp", "OPERATION_ID", "Long")
+	F.Data.DataTable.AddColumn("dtInsertValueSaveTemp", "VALUE", "String")
+	F.Data.DataTable.AddColumn("dtInsertValueSaveTemp", "QUANTITY", "Float")
+	F.Data.DataTable.AddColumn("dtInsertValueSaveTemp", "ADDED_BY", "String")
+	F.Data.DataTable.AddColumn("dtInsertValueSaveTemp", "ADDED_AT", "Date")
+	F.Data.DataTable.AddColumn("dtInsertValueSaveTemp", "MODIFIED_BY", "String")
+	F.Data.DataTable.AddColumn("dtInsertValueSaveTemp", "MODIFIED_AT", "Date")
+	F.Data.DataTable.AddRow("dtInsertValueSaveTemp", "REQUIREMENT_ID", V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, "OPERATION_ID", V.Screen.FormRequirementMaintenance!txtOperationID.Text.Trim, "VALUE", V.Screen.FormRequirementMaintenance!txtInsertValue.Text.Trim, "ADDED_BY", V.Caller.User, "ADDED_AT", V.Ambient.Now, "MODIFIED_BY", V.Caller.User, "MODIFIED_AT", V.Ambient.Now)
+	
+	'if a material, default quantity to 1
+	F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!ddlType.Text.Trim, =, "Material")
+		F.Data.DataTable.SetValue("dtInsertValueSaveTemp", 0, "QUANTITY", V.Screen.FormRequirementMaintenance!txtQuantity.Text.Trim)
+	F.Intrinsic.Control.EndIf
+	
+	'merge into main datatable
+	F.Data.DataTable.Merge("dtInsertValueSaveTemp", "dtInsertValues", False, 2)
+	F.Data.DataTable.AcceptChanges("dtInsertValues")
+	
+	'save to the database
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+	F.Data.DataTable.SaveToDB("dtInsertValueSaveTemp", "Con", "GCG_4401_INSERT", "REQUIREMENT_ID*!*OPERATION_ID*!*VALUE", 128)
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+	
+	F.Data.DataTable.Close("dtInsertValueSaveTemp")
+	
+	GUI.FormRequirementMaintenance.txtInsertValue.Text("")
+	F.Intrinsic.Control.CallSub(CheckOperationSaveButton)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdAddInsertValue_Click.End
+
+Program.Sub.txtInsertValue_LostFocus.Start
+'load the entered insert value if it exists
+
+F.Intrinsic.Control.Try
+
+V.Local.sRet.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sType.Declare(String)
+V.Local.sMessage.Declare(String)
+V.Local.sValue.Declare(String)
+
+V.Local.sValue.Set(V.Screen.FormRequirementMaintenance!txtInsertValue.Text.Trim)
+
+F.Intrinsic.Control.If(V.Local.sValue, !=, "")
+
+	'depending on other options, could be part or workcenter
+	F.Intrinsic.Control.SelectCase(V.Screen.FormRequirementMaintenance!ddlType.Text.Trim)
+		F.Intrinsic.Control.Case("Labor")
+			F.Intrinsic.String.Build("select RTRIM(MACHINE) from V_WORKCENTERS where UPPER(MACHINE) = '{0}'", V.Local.sValue.UCase, V.Local.sSQL)
+			V.Local.sType.Set("workcenter")
+			
+		F.Intrinsic.Control.Case("Material")
+			F.Intrinsic.String.Build("select RTRIM(PART) from V_INVENTORY_MSTR where UPPER(PART) = '{0}'", V.Local.sValue.UCase, V.Local.sSQL)
+			V.Local.sType.Set("part")
+	F.Intrinsic.Control.EndSelect
+	
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+	F.ODBC.Connection!Con.ExecuteAndReturn(V.Local.sSQL, V.Local.sRet)
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+	
+	F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+		F.Intrinsic.String.Build("Invalid {0} entered.", V.Local.sType, V.Local.sMessage)
+		F.Intrinsic.UI.Msgbox(V.Local.sMessage)
+		GUI.FormRequirementMaintenance.txtInsertValue.Text("")
+	F.Intrinsic.Control.Else
+		GUI.FormRequirementMaintenance.txtInsertValue.Text(V.Local.sRet.Trim)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.txtInsertValue_LostFocus.End
+
+Program.Sub.cmdInsertValueBrowser_Click.Start
+'browser for insert values
+
+F.Intrinsic.Control.Try
+
+V.Local.sRet.Declare(String)
+V.Local.iRet.Declare(Long)
+V.Local.iCounter.Declare(Long)
+V.Local.sTemp.Declare(String)
+
+'either parts or workcenters depending on other options
+F.Intrinsic.UI.SetBrowserMultiSelect(True)
+F.Intrinsic.Control.SelectCase(V.Screen.FormRequirementMaintenance!ddlType.Text.Trim)
+	F.Intrinsic.Control.Case("Labor")
+		F.Intrinsic.UI.Browser(400, "", V.Local.sRet)
+		
+	F.Intrinsic.Control.Case("Material")
+		F.Intrinsic.UI.Browser(105, "", V.Local.sRet)
+	
+F.Intrinsic.Control.EndSelect
+F.Intrinsic.UI.SetBrowserMultiSelect(False)
+
+F.Intrinsic.Control.If(V.Local.sRet.IsNotCancel)
+	F.Intrinsic.String.Split(V.Local.sRet, "!*!", V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet.UBound, >, 0)
+		F.Intrinsic.UI.Msgbox("Multiple items were selected. Add them all now?", "Browser Selection", 4, V.Local.iRet)
+		F.Intrinsic.Control.If(V.Local.iRet, =, V.Ambient.MsgBoxYes)
+			F.Intrinsic.Control.For(V.Local.iCounter, 0, V.Local.sRet.UBound, 1)
+				F.Intrinsic.String.Split(V.Local.sRet(V.Local.iCounter), "*!*", V.Local.sTemp)
+				GUI.FormRequirementMaintenance.txtInsertValue.Text(V.Local.sTemp(0))
+				GUI.FormRequirementMaintenance.txtQuantity.Text("1")
+				F.Intrinsic.Control.CallSub(cmdAddInsertValue_Click)
+			F.Intrinsic.Control.Next(V.Local.iCounter)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+		GUI.FormRequirementMaintenance.txtInsertValue.Text(V.Local.sRet(0).Trim)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdInsertValueBrowser_Click.End
+
+Program.Sub.gsgcInsertValues_RowCellClick.Start
+'delete the selected insert value
+
+F.Intrinsic.Control.Try
+
+V.Local.sSQL.Declare(String)
+
+F.Intrinsic.Control.If(V.Args.Column, =, "DELETE")
+	F.Intrinsic.String.Build("delete from GCG_4401_INSERT where REQUIREMENT_ID = {0} and OPERATION_ID = {1} and VALUE = '{2}'", V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, V.Screen.FormRequirementMaintenance!txtOperationID.Text.Trim, V.DataTable.dtInsertValues(V.Args.RowIndex).VALUE!FieldValTrim, V.Local.sSQL)
+	
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+	
+	F.Data.DataTable.DeleteRow("dtInsertValues", V.Args.RowIndex)
+	F.Data.DataTable.AcceptChanges("dtInsertValues")
+	F.Intrinsic.Control.CallSub(CheckOperationSaveButton)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.gsgcInsertValues_RowCellClick.End
+
+Program.Sub.gsgcOperations_RowClick.Start
+'on double click, load the selected value
+
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.Args.Clicks, >, 1)
+	F.Intrinsic.Control.CallSub(CheckOperationSaved)
+	GUI.FormRequirementMaintenance.txtOperationID.Text(V.DataTable.dtOperations(V.Args.RowIndex).OPERATION_ID!FieldValLong)
+	F.Intrinsic.Control.CallSub(LoadOperation)
+	V.Global.bUnsavedOperation.Set(False)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.gsgcOperations_RowClick.End
+
+Program.Sub.ddlType_Click.Start
+'disable/enable screen based on selection, and change labels
+
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.SelectCase(V.Screen.FormRequirementMaintenance!ddlType.Text.Trim)
+	F.Intrinsic.Control.Case("Labor")
+		F.Intrinsic.Control.CallSub(LoadModeDropDown, "COMMENT", False)
+		
+		GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "VALUE", "Caption", "WC")
+		GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "QUANTITY", "Visible", False)
+		GUI.FormRequirementMaintenance.txtComments.Text("")
+		GUI.FormRequirementMaintenance.txtInsertValue.Text("")
+		
+		GUI.FormRequirementMaintenance.ddlMode.Enabled(True)
+		
+		F.Intrinsic.Control.CallSub(ToggleInsertValuesAndComments, "VALUES_OR_COMMENTS", True, "DISABLE_ALL", False)
+		
+	F.Intrinsic.Control.Case("Material")
+		F.Intrinsic.Control.CallSub(LoadModeDropDown, "COMMENT", False)
+		
+		GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "VALUE", "Caption", "Part")
+		GUI.FormRequirementMaintenance.gsgcInsertValues.SetColumnProperty("gvInsertValues", "QUANTITY", "Visible", True)
+		GUI.FormRequirementMaintenance.txtComments.Text("")
+		GUI.FormRequirementMaintenance.txtInsertValue.Text("")
+		
+		GUI.FormRequirementMaintenance.ddlMode.Enabled(True)
+		
+		F.Intrinsic.Control.CallSub(ToggleInsertValuesAndComments, "VALUES_OR_COMMENTS", True, "DISABLE_ALL", False)
+		
+	F.Intrinsic.Control.Case("Comment")
+		F.Intrinsic.Control.CallSub(LoadModeDropDown, "COMMENT", True)
+		
+		GUI.FormRequirementMaintenance.ddlMode.Enabled(True)
+		
+		F.Intrinsic.Control.CallSub(ToggleInsertValuesAndComments, "VALUES_OR_COMMENTS", False, "DISABLE_ALL", False)
+	
+	F.Intrinsic.Control.CaseElse
+		GUI.FormRequirementMaintenance.ddlMode.Enabled(False)
+		GUI.FormRequirementMaintenance.ddlMode.ListIndex(-1)
+		
+		F.Intrinsic.Control.CallSub(ToggleInsertValuesAndComments, "VALUES_OR_COMMENTS", False, "DISABLE_ALL", True)
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.CallSub(BuildInsertValueCaption)
+F.Intrinsic.Control.CallSub(CheckOperationSaveButton)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.ddlType_Click.End
+
+Program.Sub.BuildInsertValueCaption.Start
+'builds the caption for the insert value text box based off of the mode and the passed type
+'pass V.Args.Type
+
+F.Intrinsic.Control.Try
+
+V.Local.sAction.Declare(String, "")
+V.Local.bInstring.Declare(Boolean, False)
+V.Local.sCaption.Declare(String)
+V.Local.sType.Declare(String, "")
+
+'get action type
+F.Intrinsic.String.IsInString(V.Screen.FormRequirementMaintenance!ddlMode.Text.Trim, "Insert", True, V.Local.bInstring)
+F.Intrinsic.Control.If(V.Local.bInstring)
+	V.Local.sAction.Set("Insert")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.IsInString(V.Screen.FormRequirementMaintenance!ddlMode.Text.Trim, "Replace", True, V.Local.bInstring)
+	F.Intrinsic.Control.If(V.Local.bInstring)
+		V.Local.sAction.Set("Replace With")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!ddlType.Text.Trim, =, "Labor")
+	V.Local.sType.Set("WC")
+F.Intrinsic.Control.ElseIf(V.Screen.FormRequirementMaintenance!ddlType.Text.Trim, =, "Material")
+	V.Local.sType.Set("Part")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.sAction.Trim, =, "", "OR", V.Local.sType.Trim, =, "")
+	V.Local.sCaption.Set("Insert Value :")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("{0} to {1} :", V.Local.sType, V.Local.sAction, V.Local.sCaption)
+F.Intrinsic.Control.EndIf
+
+GUI.FormRequirementMaintenance.lblGrid.Caption(V.Local.sCaption)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.BuildInsertValueCaption.End
+
+Program.Sub.ToggleInsertValuesAndComments.Start
+'pass boolean VALUES_OR_COMMENTS, 1 = values, 0 = comments
+'disable_all to override
+
+F.Intrinsic.Control.Try
+
+V.Local.bClearComments.Declare(Boolean)
+V.Local.bClearValues.Declare(Boolean)
+
+F.Intrinsic.Control.If(V.Args.Disable_All)
+	GUI.FormRequirementMaintenance.txtComments.Enabled(False)
+	GUI.FormRequirementMaintenance.gsgcInsertValues.Enabled(False)
+	GUI.FormRequirementMaintenance.txtInsertValue.Enabled(False)
+	GUI.FormRequirementMaintenance.txtQuantity.Enabled(False)
+	GUI.FormRequirementMaintenance.cmdInsertValueBrowser.Enabled(False)
+	GUI.FormRequirementMaintenance.cmdAddInsertValue.Enabled(False)
+	
+	GUI.FormRequirementMaintenance.txtInsertValue.BackColor(V.Global.iBackColorDisabled)
+	GUI.FormRequirementMaintenance.txtQuantity.BackColor(V.Global.iBackColorDisabled)
+	GUI.FormRequirementMaintenance.txtComments.BackColor(V.Global.iBackColorDisabled)
+	
+	V.Local.bClearComments.Set(True)
+	V.Local.bClearValues.Set(True)
+F.Intrinsic.Control.Else
+	GUI.FormRequirementMaintenance.txtComments.Enabled(V.Args.VALUES_OR_COMMENTS.Not)
+	GUI.FormRequirementMaintenance.gsgcInsertValues.Enabled(V.Args.VALUES_OR_COMMENTS)
+	GUI.FormRequirementMaintenance.txtInsertValue.Enabled(V.Args.VALUES_OR_COMMENTS)
+	GUI.FormRequirementMaintenance.cmdInsertValueBrowser.Enabled(V.Args.VALUES_OR_COMMENTS)
+	GUI.FormRequirementMaintenance.cmdAddInsertValue.Enabled(V.Args.VALUES_OR_COMMENTS)
+	V.Local.bClearComments.Set(V.Args.VALUES_OR_COMMENTS)
+	V.Local.bClearValues.Set(V.Args.VALUES_OR_COMMENTS.Not)
+	
+	F.Intrinsic.Control.If(V.Args.VALUES_OR_COMMENTS)
+		GUI.FormRequirementMaintenance.txtComments.BackColor(V.Global.iBackColorDisabled)
+		GUI.FormRequirementMaintenance.txtInsertValue.BackColor(V.Global.iBackColorEnabled)
+	F.Intrinsic.Control.Else
+		GUI.FormRequirementMaintenance.txtComments.BackColor(V.Global.iBackColorEnabled)
+		GUI.FormRequirementMaintenance.txtInsertValue.BackColor(V.Global.iBackColorDisabled)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!ddlType.Text.Trim, =, "Material")
+		GUI.FormRequirementMaintenance.txtQuantity.Enabled(True)
+		GUI.FormRequirementMaintenance.txtQuantity.BackColor(V.Global.iBackColorEnabled)
+	F.Intrinsic.Control.Else
+		GUI.FormRequirementMaintenance.txtQuantity.Enabled(False)
+		GUI.FormRequirementMaintenance.txtQuantity.BackColor(V.Global.iBackColorDisabled)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.bClearComments)
+	GUI.FormRequirementMaintenance.txtComments.Text("")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.bClearValues)
+	GUI.FormRequirementMaintenance.txtInsertValue.Text("")
+	F.Data.DataTable.DeleteRow("dtInsertValues")
+	F.Data.DataTable.AcceptChanges("dtInsertValues")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.ToggleInsertValuesAndComments.End
+
+Program.Sub.RemoveType.Start
+'remove type from value label
+
+F.Intrinsic.Control.Try
+
+V.Local.sTemp.Declare(String)
+
+F.Intrinsic.String.Replace(V.Screen.FormRequirementMaintenance!lblValue.Text.Trim, "Material", "", V.Local.sTemp)
+F.Intrinsic.String.Replace(V.Local.sTemp, "WC", "", V.Local.sTemp)
+F.Intrinsic.String.Replace(V.Local.sTemp, "Value :", "", V.Local.sTemp)
+F.Intrinsic.String.Replace(V.Local.sTemp, "Labor", "", V.Local.sTemp)
+F.Intrinsic.String.Replace(V.Local.sTemp, "Comment", "", V.Local.sTemp)
+F.Intrinsic.String.Replace(V.Local.sTemp, "Value", "", V.Local.sTemp)
+
+F.Intrinsic.Variable.AddRV("CAPTION", V.Local.sTemp)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.RemoveType.End
+
+Program.Sub.ddlInsertType_Click.Start
+'disable/enable screen based on selection, and change labels
+
+F.Intrinsic.Control.Try
+
+V.Local.sCaption.Declare(String)
+V.Local.sTemp.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!ddlInsertType.Text.Trim, !=, "")
+	F.Intrinsic.Control.CallSub(RemoveType)
+	F.Intrinsic.String.Replace(V.Screen.FormRequirementMaintenance!ddlInsertType.Text.Trim, "Labor", "WC", V.Local.sTemp)
+	F.Intrinsic.String.Build("{0}{1}", V.Local.sTemp, V.Args.Caption, V.Local.sCaption)
+	GUI.FormRequirementMaintenance.lblValue.Caption(V.Local.sCaption)
+	GUI.FormRequirementMaintenance.txtValue.Enabled(True)
+	GUI.FormRequirementMaintenance.txtValue.BackColor(V.Global.iBackColorEnabled)
+	GUI.FormRequirementMaintenance.cmdValueBrowser.Enabled(True)
+F.Intrinsic.Control.Else
+	GUI.FormRequirementMaintenance.lblValue.Caption("Value :")
+	GUI.FormRequirementMaintenance.txtValue.Text("")
+	GUI.FormRequirementMaintenance.txtValue.Enabled(False)
+	GUI.FormRequirementMaintenance.txtValue.BackColor(V.Global.iBackColorDisabled)
+	GUI.FormRequirementMaintenance.cmdValueBrowser.Enabled(False)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(CheckOperationSaveButton)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.ddlInsertType_Click.End
+
+Program.Sub.txtValue_LostFocus.Start
+'load the selected value
+
+F.Intrinsic.Control.Try
+
+V.Local.sRet.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sType.Declare(String)
+V.Local.sMessage.Declare(String)
+V.Local.sValue.Declare(String)
+
+V.Local.sValue.Set(V.Screen.FormRequirementMaintenance!txtValue.Text.Trim)
+
+F.Intrinsic.Control.If(V.Local.sValue, !=, "")
+	
+	'could be part or workcenter based on selection
+	F.Intrinsic.Control.SelectCase(V.Screen.FormRequirementMaintenance!ddlInsertType.Text.Trim)
+		F.Intrinsic.Control.Case("Labor")
+			F.Intrinsic.String.Build("select RTRIM(MACHINE) from V_WORKCENTERS where UPPER(MACHINE) = '{0}'", V.Local.sValue.UCase, V.Local.sSQL)
+			V.Local.sType.Set("workcenter")
+			
+		F.Intrinsic.Control.Case("Material")
+			F.Intrinsic.String.Build("select RTRIM(PART) from V_INVENTORY_MSTR where UPPER(PART) = '{0}'", V.Local.sValue.UCase, V.Local.sSQL)
+			V.Local.sType.Set("part")
+			
+		F.Intrinsic.Control.CaseElse
+			F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!ddlType.Text.Trim, =, "Labor")
+				F.Intrinsic.String.Build("select RTRIM(MACHINE) from V_WORKCENTERS where UPPER(MACHINE) = '{0}'", V.Local.sValue.UCase, V.Local.sSQL)
+				V.Local.sType.Set("workcenter")
+			F.Intrinsic.Control.ElseIf(V.Screen.FormRequirementMaintenance!ddlType.Text.Trim, =, "Material")
+				F.Intrinsic.String.Build("select RTRIM(PART) from V_INVENTORY_MSTR where UPPER(PART) = '{0}'", V.Local.sValue.UCase, V.Local.sSQL)
+				V.Local.sType.Set("part")
+			F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndSelect
+	
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+	F.ODBC.Connection!Con.ExecuteAndReturn(V.Local.sSQL, V.Local.sRet)
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+	
+	F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+		F.Intrinsic.String.Build("Invalid {0} entered.", V.Local.sType, V.Local.sMessage)
+		F.Intrinsic.UI.Msgbox(V.Local.sMessage)
+		GUI.FormRequirementMaintenance.txtValue.Text("")
+	F.Intrinsic.Control.Else
+		GUI.FormRequirementMaintenance.txtValue.Text(V.Local.sRet.Trim)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(CheckOperationSaveButton)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.txtValue_LostFocus.End
+
+Program.Sub.cmdValueBrowser_Click.Start
+'browser for values
+
+F.Intrinsic.Control.Try
+
+V.Local.sRet.Declare(String)
+
+'either parts or workcenters depending on other options
+F.Intrinsic.Control.SelectCase(V.Screen.FormRequirementMaintenance!ddlInsertType.Text.Trim)
+	F.Intrinsic.Control.Case("Labor")
+		F.Intrinsic.UI.Browser(400, "", V.Local.sRet)
+		
+	F.Intrinsic.Control.Case("Material")
+		F.Intrinsic.UI.Browser(105, "", V.Local.sRet)
+		
+	F.Intrinsic.Control.CaseElse
+		F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!ddlType.Text.Trim, =, "Labor")
+			F.Intrinsic.UI.Browser(400, "", V.Local.sRet)
+		F.Intrinsic.Control.ElseIf(V.Screen.FormRequirementMaintenance!ddlType.Text.Trim, =, "Material")
+			F.Intrinsic.UI.Browser(105, "", V.Local.sRet)
+		F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.If(V.Local.sRet.IsNotCancel)
+	F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+	GUI.FormRequirementMaintenance.txtValue.Text(V.Local.sRet(0).Trim)
+	F.Intrinsic.Control.CallSub(CheckOperationSaveButton)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdValueBrowser_Click.End
+
+Program.Sub.FormRequirementMaintenance_UnLoad.Start
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.CallSub(cmdClear_Click)
+F.Intrinsic.Control.If(V.Global.bCancel)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.FormRequirementMaintenance_UnLoad.End
+
+Program.Sub.ddlMode_Click.Start 
+'disable/enable screen based on selection, and change labels
+
+F.Intrinsic.Control.Try
+
+V.Local.sCaption.Declare(String)
+V.Local.bCaption.Declare(Boolean, True)
+
+F.Intrinsic.Control.SelectCase(V.Screen.FormRequirementMaintenance!ddlMode.Text.Trim)
+	F.Intrinsic.Control.CaseAny("Replace", "Insert Before", "Insert After")
+		F.Intrinsic.String.Build("{0} Sequence Type :", V.Screen.FormRequirementMaintenance!ddlMode.Text.Trim, V.Local.sCaption)
+		GUI.FormRequirementMaintenance.lblValueType.Caption(V.Local.sCaption)
+		
+		GUI.FormRequirementMaintenance.ddlInsertType.Enabled(True)
+		
+		F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!ddlType.Text.Trim, =, "Comment")
+			F.Intrinsic.Control.CallSub(ToggleInsertValuesAndComments, "VALUES_OR_COMMENTS", False, "DISABLE_ALL", False)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Control.CallSub(ToggleInsertValuesAndComments, "VALUES_OR_COMMENTS", True, "DISABLE_ALL", False)
+		F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Case("Remove")
+		GUI.FormRequirementMaintenance.ddlInsertType.ListIndex(-1)
+		GUI.FormRequirementMaintenance.ddlInsertType.Enabled(False)
+		GUI.FormRequirementMaintenance.lblValueType.Caption("Insert Type :")
+		
+		F.Intrinsic.Control.CallSub(ToggleInsertValuesAndComments, "VALUES_OR_COMMENTS", False, "DISABLE_ALL", True)
+		
+		GUI.FormRequirementMaintenance.txtValue.Enabled(True)
+		GUI.FormRequirementMaintenance.txtValue.BackColor(V.Global.iBackColorEnabled)
+		GUI.FormRequirementMaintenance.cmdValueBrowser.Enabled(True)
+		
+	F.Intrinsic.Control.CaseElse
+		V.Local.bCaption.Set(False)
+		GUI.FormRequirementMaintenance.ddlInsertType.Enabled(False)
+		GUI.FormRequirementMaintenance.txtValue.Enabled(False)
+		GUI.FormRequirementMaintenance.txtValue.BackColor(V.Global.iBackColorDisabled)
+		GUI.FormRequirementMaintenance.cmdValueBrowser.Enabled(False)
+		GUI.FormRequirementMaintenance.lblValueType.Caption("Insert Type :")
+		GUI.FormRequirementMaintenance.ddlInsertType.ListIndex(-1)
+		GUI.FormRequirementMaintenance.txtValue.Text("")
+		
+		F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!ddlType.Text.Trim, =, "Comment")
+			F.Intrinsic.Control.CallSub(ToggleInsertValuesAndComments, "VALUES_OR_COMMENTS", False, "DISABLE_ALL", False)
+		F.Intrinsic.Control.ElseIf(V.Screen.FormRequirementMaintenance!ddlType.Text.Trim, =, "")
+			F.Intrinsic.Control.CallSub(ToggleInsertValuesAndComments, "VALUES_OR_COMMENTS", False, "DISABLE_ALL", True)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Control.CallSub(ToggleInsertValuesAndComments, "VALUES_OR_COMMENTS", True, "DISABLE_ALL", False)
+		F.Intrinsic.Control.EndIf
+		
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.If(V.Local.bCaption)
+	F.Intrinsic.Control.If(V.Screen.FormRequirementMaintenance!ddlInsertType.Text.Trim, =, "")
+		V.Local.sCaption.Set("Value")
+	F.Intrinsic.Control.Else
+		V.Local.sCaption.Set(V.Screen.FormRequirementMaintenance!ddlInsertType.Text.Trim)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.String.Build("{0} to {1} :", V.Local.sCaption, V.Screen.FormRequirementMaintenance!ddlMode.Text.Trim, V.Local.sCaption)
+	GUI.FormRequirementMaintenance.lblValue.Caption(V.Local.sCaption)
+F.Intrinsic.Control.Else
+	GUI.FormRequirementMaintenance.lblValue.Caption("Value :")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(BuildInsertValueCaption)
+F.Intrinsic.Control.CallSub(CheckOperationSaveButton)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.ddlMode_Click.End
+
+Program.Sub.cmdDelete_Click.Start
+'delete the shown requirement
+
+F.Intrinsic.Control.Try
+
+V.Local.iRet.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.iID.Declare(Long)
+
+F.Intrinsic.Control.If(V.Global.bCalledDelete)
+	V.Local.iRet.Set(V.Ambient.MsgBoxYes)
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("Are you sure you want to delete this requirement?", "Delete", 4, V.Local.iRet)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.iRet, =, V.Ambient.MsgBoxYes)
+	V.Local.iID.Set(V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim)
+	
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+	
+	F.Intrinsic.String.Build("delete from GCG_4401_REQUIREMENT where REQUIREMENT_ID = {0}", V.Local.iID, V.Local.sSQL)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+	
+	F.Intrinsic.String.Build("delete from GCG_4401_CUSTOMERS where REQUIREMENT_ID = {0}", V.Local.iID, V.Local.sSQL)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+	
+	F.Intrinsic.String.Build("delete from GCG_4401_SORT_CODES where REQUIREMENT_ID = {0}", V.Local.iID, V.Local.sSQL)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+	
+	F.Intrinsic.String.Build("delete from GCG_4401_OPERATIONS where REQUIREMENT_ID = {0}", V.Local.iID, V.Local.sSQL)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+	
+	F.Intrinsic.String.Build("delete from GCG_4401_INSERT where REQUIREMENT_ID = {0}", V.Local.iID, V.Local.sSQL)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+	
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+	
+	V.Global.bCalledFromDelete.Set(True)
+	F.Intrinsic.Control.CallSub(cmdClear_Click)
+	V.Global.bCalledFromDelete.Set(False)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdDelete_Click.End
+
+Program.Sub.cmdDeleteOperation_Click.Start
+'delete the selected operation
+
+F.Intrinsic.Control.Try
+
+V.Local.iRet.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.iReqirementID.Declare(Long)
+V.Local.iOperationID.Declare(Long)
+V.Local.sFilter.Declare(String)
+
+V.Global.bLoadingOperation.Set(True)
+
+F.Intrinsic.Control.If(V.Global.bCalledDelete)
+	V.Local.iRet.Set(V.Ambient.MsgBoxYes)
+	V.Global.bCalledDelete.Set(False)
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("Are you sure you want to delete this operation?", "Delete", 4, V.Local.iRet)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.iRet, =, V.Ambient.MsgBoxYes)
+	V.Local.iReqirementID.Set(V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim)
+	V.Local.iOperationID.Set(V.Screen.FormRequirementMaintenance!txtOperationID.Text.Trim)
+	
+	'delete from the database
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+	
+	F.Intrinsic.String.Build("delete from GCG_4401_OPERATIONS where REQUIREMENT_ID = {0} and OPERATION_ID = {1}", V.Local.iReqirementID, V.Local.iOperationID, V.Local.sSQL)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+	
+	F.Intrinsic.String.Build("delete from GCG_4401_INSERT where REQUIREMENT_ID = {0} and OPERATION_ID = {1}", V.Local.iReqirementID, V.Local.iOperationID, V.Local.sSQL)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+	
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+	
+	'delete from the grid
+	F.Intrinsic.String.Build("[OPERATION_ID] = {0}", V.Local.iOperationID, V.Local.sFilter)
+	F.Data.DataView.Create("dtOperations", "dvOperationsDelete", 22, V.Local.sFilter, "")
+	F.Intrinsic.Control.If(V.DataView.dtOperations!dvOperationsDelete.RowCount, >, 0)
+		F.Data.DataView.DeleteRow("dtOperations", "dvOperationsDelete", 0)
+		F.Data.DataTable.AcceptChanges("dtOperations")
+	F.Intrinsic.Control.EndIf
+	F.Data.DataView.Close("dtOperations", "dvOperationsDelete")
+	
+	V.Global.bCalledFromDelete.Set(True)
+	F.Intrinsic.Control.CallSub(cmdClearOperation_Click)
+	V.Global.bCalledFromDelete.Set(False)
+F.Intrinsic.Control.EndIf
+
+V.Global.bLoadingOperation.Set(False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdDeleteOperation_Click.End
+
+Program.Sub.ToggleHeaderControlsEnabled.Start
+'pass ENABLED boolean
+
+F.Intrinsic.Control.Try
+
+GUI.FormRequirementMaintenance.txtRequirementDescription.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.cmdSaveRequirement.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.cmdDelete.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.cmdClear.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.txtCustomer.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.txtCustomerName.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.cmdCustomerBrowser.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.cmdAddCustomer.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.gsgcCustomers.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.txtSortCode.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.txtSortCodeDescription.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.cmdSortCodeBrowser.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.cmdAddSortCode.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.gsgcSortCodes.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.frameOperations.Enabled(V.Args.Enabled)
+
+GUI.FormRequirementMaintenance.cmdNewRequirement.Enabled(V.Args.Enabled.Not)
+
+F.Intrinsic.Control.If(V.Args.Enabled)
+	GUI.FormRequirementMaintenance.txtRequirementDescription.BackColor(V.Global.iBackColorEnabled)
+	GUI.FormRequirementMaintenance.txtCustomer.BackColor(V.Global.iBackColorEnabled)
+	GUI.FormRequirementMaintenance.txtCustomerName.BackColor(V.Global.iBackColorEnabled)
+	GUI.FormRequirementMaintenance.txtSortCode.BackColor(V.Global.iBackColorEnabled)
+	GUI.FormRequirementMaintenance.txtSortCodeDescription.BackColor(V.Global.iBackColorEnabled)
+F.Intrinsic.Control.Else
+	GUI.FormRequirementMaintenance.txtRequirementDescription.BackColor(V.Global.iBackColorDisabled)
+	GUI.FormRequirementMaintenance.txtCustomer.BackColor(V.Global.iBackColorDisabled)
+	GUI.FormRequirementMaintenance.txtCustomerName.BackColor(V.Global.iBackColorDisabled)
+	GUI.FormRequirementMaintenance.txtSortCode.BackColor(V.Global.iBackColorDisabled)
+	GUI.FormRequirementMaintenance.txtSortCodeDescription.BackColor(V.Global.iBackColorDisabled)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.ToggleHeaderControlsEnabled.End
+
+Program.Sub.ToggleOperationHeaderControlsEnabled.Start
+'pass ENABLED boolean
+
+F.Intrinsic.Control.Try
+
+GUI.FormRequirementMaintenance.cmdNewOperation.Enabled(V.Args.Enabled.Not)
+GUI.FormRequirementMaintenance.cmdClearOperation.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.cmdDeleteOperation.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.txtOperationDescription.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.ddlType.Enabled(V.Args.Enabled)
+GUI.FormRequirementMaintenance.cmdSaveOperation.Enabled(V.V.Global.bUnsavedOperation)
+
+F.Intrinsic.Control.If(V.Args.Enabled)
+	GUI.FormRequirementMaintenance.txtOperationDescription.BackColor(V.Global.iBackColorEnabled)
+F.Intrinsic.Control.Else
+	GUI.FormRequirementMaintenance.txtOperationDescription.BackColor(V.Global.iBackColorDisabled)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.ToggleOperationHeaderControlsEnabled.End
+
+Program.Sub.AddLogFile.Start
+'pass a project #, and a message
+'date and time will be automatically added
+'pass PROJECT (Folder)
+'pass type (subfolder)
+'MESSAGE (what to log)
+
+F.Intrinsic.Control.Try
+
+V.Local.sProject.Declare(String)
+V.Local.sMessage.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.sPath.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sContents.Declare(String)
+V.Local.sType.Declare(String)
+V.Local.sName.Declare(String)
+
+V.Local.sProject.Set(V.Args.Project.Trim)
+V.Local.sMessage.Set(V.Args.Message.Trim)
+V.Local.sType.Set(V.Args.Type)
+
+F.Intrinsic.File.MakeFilenameFriendly(V.Local.sProject, V.Local.sProject)
+F.Intrinsic.String.Build("{0}\Custom\{1}\{2}\Log\{3}\", V.Caller.GlobalDir, V.Local.sProject, V.Caller.CompanyCode, V.Local.sType, V.Local.sPath)
+F.Intrinsic.Control.CallSub(CheckDirectories, "DIRECTORIES", V.Local.sPath)
+
+F.Intrinsic.String.StripCharacters(V.Ambient.Now, V.Local.sName)
+
+F.Intrinsic.String.Build("{0}\{1}_Log.txt", V.Local.sPath, V.Local.sName, V.Local.sFile)
+F.Intrinsic.File.String2File(V.Local.sFile, V.Local.sMessage)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.AddLogFile.End
+
+Program.Sub.ErrorMessage.Start
+'basic error message for replacing catch block
+'this is really just for when printing the message and ending program
+'pass error number, error description, current subroutine
+'optional callback sub, this will be called before ending
+'optional unattended parameters, those subs may not exist if not using them but won't be called
+F.Intrinsic.Control.Try
+
+V.Local.iError.Declare(Long)
+V.Local.sErrorDescription.Declare(String)
+V.Local.sSubroutine.Declare(String)
+V.Local.sError.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.sCallback.Declare(String)
+V.Static.bError.Declare(Boolean, False)
+V.Local.sDoubleNewLine.Declare(String)
+
+V.Local.iError.Set(V.Args.ErrorNumber)
+V.Local.sErrorDescription.Set(V.Args.ErrorDescription)
+V.Local.sSubroutine.Set(V.Args.Subroutine)
+
+'make sure we aren't in an error loop
+F.Intrinsic.Control.If(V.Static.bError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndIf
+V.Static.bError.Set(True)
+
+F.Intrinsic.String.Build("{6}{1}{1}Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Caller.ScriptFile, V.Ambient.Newline, V.Local.sSubroutine, V.Local.iError, V.Local.sErrorDescription, V.Ambient.GABVersion, V.Ambient.Now, V.Local.sError)
+
+F.Intrinsic.Variable.ArgExists("UNATTENDED", V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists)
+	F.Intrinsic.Control.If(V.Args.UNATTENDED)
+		F.Intrinsic.Control.CallSub(UnattendedErrorMessage, "MESSAGE", V.Local.sError, "PROJECT", V.Args.PROJECT, "PROJECTTITLE", V.Args.PROJECTTITLE, "TASK", V.Args.Task)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Variable.ArgExists("WRITE_LOG_FILE", V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists)
+	F.Intrinsic.Control.If(V.Args.WRITE_LOG_FILE)
+		F.Intrinsic.String.Build("{0}{0}", V.Ambient.NewLine, V.Local.sDoubleNewLine)
+		F.Intrinsic.String.Replace(V.Local.sError, V.Local.sDoubleNewLine, V.Ambient.NewLine, V.Local.sError)
+		
+		F.Intrinsic.String.Build("Time: {0}{1}User: {2}{1}Windows User: {3}{1}Machine: {4}{1}PID: {5}{1}Terminal: {6}{1}Caller: {7}{1}Synchronous: {8}{1}Thread ID: {9}{1}Pervasive Client: {10}{1}GAB Version: {11}{1}GSS Version: {12}{1}Error: {13}{1}Error Description: {14}{1}Script: {15}{1}Subroutine: {16}", V.Ambient.Now, V.Ambient.NewLine, V.Caller.User, V.System.UserName, V.System.ComputerName, V.Ambient.PID, V.Caller.Terminal, V.Caller.Caller, V.Caller.Sync,  V.Ambient.ThreadID, V.Ambient.PervasiveClientVersion, V.Ambient.GABVersion, V.Caller.GSSVersion, V.Local.iError, V.Local.sErrorDescription, V.Caller.ScriptFile, V.Local.sSubroutine, V.Local.sError)
+		
+		F.Intrinsic.Control.CallSub(AddLogFile, "PROJECT", V.Args.Project, "TYPE", V.Args.Task, "MESSAGE", V.Local.sError)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Variable.ArgExists("Callback", V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists)
+	V.Local.sCallback.Set(V.Args.Callback.Trim)
+	F.Intrinsic.Control.CallSub(V.Local.sCallback)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.ErrorMessage.End
+
+Program.Sub.CheckDirectories.Start
+'check if the given import directories exist
+'create them if they don't
+'pass directories delimited with *!*
+
+F.Intrinsic.Control.Try
+
+V.Local.sDirectories.Declare(String)
+V.Local.sPath.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.iCounter.Declare(Long)
+
+V.Local.sDirectories.Set(V.Args.Directories)
+F.Intrinsic.String.Split(V.Local.sDirectories, "*!*", V.Local.sDirectories)
+
+F.Intrinsic.Control.For(V.Local.iCounter, 0, V.Local.sDirectories.UBound, 1)
+	V.Local.sPath.Set(V.Local.sDirectories(V.Local.iCounter))
+	F.Intrinsic.File.DirExists(V.Local.sPath, V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists.Not)
+		F.Intrinsic.File.CreateDir(V.Local.sPath)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iCounter)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.CheckDirectories.End
+
+Program.Sub.txtOperationDescription_LostFocus.Start
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.CallSub(CheckOperationSaveButton)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.txtOperationDescription_LostFocus.End
+
+Program.Sub.CheckOperationSaved.Start
+F.Intrinsic.Control.Try
+
+V.Local.iRet.Declare(Long, -1)
+
+V.Global.bCancel.Set(False)
+F.Intrinsic.Control.If(V.Global.bLoadingOperation.Not)
+	F.Intrinsic.Control.If(V.Global.bNewOperation.Set)
+		F.Intrinsic.UI.Msgbox("The new operation has not been saved. Save it before clearing?", "Unsaved Operation", 4, V.Local.iRet)
+		F.Intrinsic.Control.If(V.Local.iRet, =, V.Ambient.MsgBoxYes)
+			F.Intrinsic.Control.CallSub(cmdSaveOperation_Click)
+		F.Intrinsic.Control.Else
+			V.Global.bCalledDelete.Set(True)
+			F.Intrinsic.Control.CallSub(cmdDeleteOperation_Click)
+			V.Global.bCalledDelete.Set(False)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.ElseIf(V.Global.bUnsavedOperation)
+		F.Intrinsic.UI.Msgbox("This operation has unsaved changes. Save it before clearing?", "Unsaved Operation", 4, V.Local.iRet)
+		F.Intrinsic.Control.If(V.Local.iRet, =, V.Ambient.MsgBoxYes)
+			F.Intrinsic.Control.CallSub(cmdSaveOperation_Click)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.CheckOperationSaved.End
+
+Program.Sub.CheckOperationSaveButton.Start
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.Global.bLoadingOperation.Not)
+	V.Global.bUnsavedOperation.Set(True)
+	GUI.FormRequirementMaintenance.cmdSaveOperation.Enabled(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.CheckOperationSaveButton.End
+
+Program.Sub.txtComments_LostFocus.Start
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.CallSub(CheckOperationSaveButton)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.txtComments_LostFocus.End
+
+Program.Sub.gsgcInsertValues_CellValueChanged.Start
+F.Intrinsic.Control.Try
+
+V.Local.sSQL.Declare(String)
+
+F.Intrinsic.Control.If(V.Args.Column, =, "QUANTITY")
+	F.Intrinsic.String.Build("update GCG_4401_INSERT set QUANTITY = {0}, MODIFIED_BY = '{1}', MODIFIED_AT = NOW() where REQUIREMENT_ID = {2} and OPERATION_ID = {3}", V.DataTable.dtInsertValues(V.Args.RowIndex).QUANTITY!FieldValFloat, V.Caller.User, V.Screen.FormRequirementMaintenance!txtRequirementID.Text.Trim, V.Screen.FormRequirementMaintenance!txtOperationID.Text.Trim, V.Local.sSQL)
+	
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", True)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+	F.Intrinsic.Control.CallSub(Connection, "CONNECT", False)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(CheckOperationSaveButton)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.gsgcInsertValues_CellValueChanged.End
+
+Program.Sub.txtRequirementDescription_LostFocus.Start
+F.Intrinsic.Control.Try
+
+V.Global.bUnsavedRequirement.Set(True)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.txtRequirementDescription_LostFocus.End
+
+Program.Sub.CheckRequirementSaved.Start
+F.Intrinsic.Control.Try
+
+V.Local.iRet.Declare(Long)
+
+F.Intrinsic.Control.If(V.Global.bUnsavedRequirement)
+	F.Intrinsic.Control.If(V.Global.bNewRequirement)
+		F.Intrinsic.UI.Msgbox("The new requirement has not been saved. Save it now?", "Requirement Save", 4, V.Local.iRet)
+		F.Intrinsic.Control.If(V.Local.iRet, =, V.Ambient.MsgBoxYes)
+			F.Intrinsic.Control.CallSub(cmdSaveRequirement_Click)
+		F.Intrinsic.Control.Else
+			V.Global.bCalledDelete.Set(True)
+			F.Intrinsic.Control.CallSub(cmdDelete_Click)
+			V.Global.bCalledDelete.Set(False)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("The requirement header has unsaved changes. Save it now?", "Requirement Save", 4, V.Local.iRet)
+		F.Intrinsic.Control.If(V.Local.iRet, =, V.Ambient.MsgBoxYes)
+			F.Intrinsic.Control.CallSub(cmdSaveRequirement_Click)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage, "ErrorNumber", V.Ambient.ErrorNumber, "ErrorDescription", V.Ambient.ErrorDescription, "Subroutine", V.Ambient.CurrentSubroutine, "Callback", "FormRequirementMaintenance_Unload", "WRITE_LOG_FILE", True, "Project", "4401", "Task", "Maintenance Menu")
+F.Intrinsic.Control.EndTry
+Program.Sub.CheckRequirementSaved.End
+
+
